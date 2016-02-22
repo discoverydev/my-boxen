@@ -44,6 +44,27 @@ class projects::workstation {
   }
 
   #
+  # gradle global settings
+  #
+
+  file { 'gradle':
+    name => "${user_home}/.gradle",
+    ensure => directory,
+  }
+
+  file { 'init.gradle':
+    require => [File['gradle'],Exec['update-workstation-files']],
+    name => "${user_home}/.gradle/init.gradle",
+    source => "${workstation_files}/gradle/init.gradle",
+  }
+
+  file { 'gradle.properties':
+    require => [File['gradle'],Exec['update-workstation-files']],
+    name => "${user_home}/.gradle/gradle.properties",
+    source => "${workstation_files}/gradle/gradle.properties",
+  }
+
+  #
   # boxen auto-updater
   #
 
