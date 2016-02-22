@@ -7,15 +7,17 @@ killall Xcode || true
 echo "calling brew_update_pre_boxen script in order to update brew dependencies."
 ./brew_update_pre_boxen.sh
 
-echo "adding boxen.update.plist to launchctl... possibly removed by ADS push to machine."
-launchctl unload ~/Library/LaunchAgents/boxen.update.plist
-launchctl load ~/Library/LaunchAgents/boxen.update.plist
-
 echo "updating boxen"
 set +e
 cd /opt/boxen/repo
 git checkout ads
 git pull
+
+echo "adding boxen.update.plist to launchctl... possibly removed by ADS push to machine."
+launchctl unload ~/Library/LaunchAgents/boxen.update.plist
+launchctl load ~/Library/LaunchAgents/boxen.update.plist
+
+echo "running boxen script"
 ./script/boxen --debug workstation
 
 # This will obtain the return status of the last command (boxen)
