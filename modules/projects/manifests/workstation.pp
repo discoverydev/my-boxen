@@ -81,14 +81,14 @@ class projects::workstation {
 
   exec { "unload-boxen-update-to-plist":
     require => File['boxen.update.plist'],
-    command => "launchctl unload boxen.update.plist",
+    command => "launchctl unload ${use_home}/Library/LaunchAgents/boxen.update.plist",
     path    => "/usr/local/bin/:/bin/:/usr/bin/",
     user    => root,
   }
 
   exec { "load-boxen-update-to-plist":
     require => Exec['unload-boxen-update-to-plist'],
-    command => "launchctl load boxen.update.plist",
+    command => "launchctl load ${use_home}/Library/LaunchAgents/boxen.update.plist",
     path    => "/usr/local/bin/:/bin/:/usr/bin/",
     user    => root,
   }
