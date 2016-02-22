@@ -2,7 +2,7 @@
 
 #USER=ga-mlsdiscovery
 USER=ga-mlsdiscovery
-SERVER=192.168.8.31
+SERVER=192.168.8.36
 
 source ~/.profile
 
