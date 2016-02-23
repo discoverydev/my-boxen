@@ -35,5 +35,3 @@ else
     echo "Boxen was NOT updated successfully."
     exit 1
 fi
-
-./add_plist_entry.sh
