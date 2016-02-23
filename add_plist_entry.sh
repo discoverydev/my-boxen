@@ -9,3 +9,4 @@ cp /tmp/workstation-files/LaunchAgents/boxen.update.plist ~/Library/LaunchAgents
 
 launchctl unload ~/Library/LaunchAgents/boxen.update.plist
 launchctl load ~/Library/LaunchAgents/boxen.update.plist
+launchctl list | grep boxen
