@@ -26,8 +26,6 @@ class projects::workstation {
     cwd => "${workstation_files}/genymotion"
   }
 
-
-
   #
   # maven global settings
   #
@@ -62,21 +60,6 @@ class projects::workstation {
     require => [File['gradle'],Exec['update-workstation-files']],
     name => "${user_home}/.gradle/gradle.properties",
     source => "${workstation_files}/gradle/gradle.properties",
-  }
-
-  #
-  # boxen auto-updater
-  #
-
-  file { "LaunchAgents":
-    name => "/Users/ga-mlsdiscovery/Library/LaunchAgents",
-    ensure => directory,
-  }
-
-  file { "boxen.update.plist":
-    require => [File['LaunchAgents'],Exec['update-workstation-files']],
-    name => "/Users/ga-mlsdiscovery/Library/LaunchAgents/boxen.update.plist",
-    source => "${workstation_files}/LaunchAgents/boxen.update.plist"
   }
 
   #
