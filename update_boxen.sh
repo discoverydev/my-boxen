@@ -1,4 +1,5 @@
 #!/bin/bash -le
+echo pwd
 echo "updating boxen"
 cd /opt/boxen/repo
 git checkout ads
