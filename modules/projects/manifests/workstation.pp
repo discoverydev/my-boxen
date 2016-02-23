@@ -79,20 +79,6 @@ class projects::workstation {
     source => "${workstation_files}/LaunchAgents/boxen.update.plist"
   }
 
-  exec { "unload-boxen-update-to-plist":
-    require => File['boxen.update.plist'],
-    command => "/usr/sbin/chown root /Users/ga-mlsdiscovery/Library/LaunchAgents/boxen.update.plist; /bin/chmod 600 /Users/ga-mlsdiscovery/Library/LaunchAgents/boxen.update.plist; launchctl unload /Users/ga-mlsdiscovery/Library/LaunchAgents/boxen.update.plist",
-    path    => "/usr/local/bin/:/bin/:/usr/bin/",
-    user    => root,
-  }
-
-  exec { "load-boxen-update-to-plist":
-    require => Exec['unload-boxen-update-to-plist'],
-    command => "/usr/sbin/chown root /Users/ga-mlsdiscovery/Library/LaunchAgents/boxen.update.plist; /bin/chmod 600 /Users/ga-mlsdiscovery/Library/LaunchAgents/boxen.update.plist; launchctl load /Users/ga-mlsdiscovery/Library/LaunchAgents/boxen.update.plist",
-    path    => "/usr/local/bin/:/bin/:/usr/bin/",
-    user    => root,
-  }
-
   #
   # keychain certificates
   #
