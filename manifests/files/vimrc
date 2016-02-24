@@ -12,3 +12,7 @@ set tabstop=4
 
 " hit jk in insert mode to switch back to normal mode
 inoremap jk <esc>
+
+" make filename completion more like bash
+set wildmode=longest,list,full
+set wildmenu
