@@ -31,6 +31,7 @@ function docker-sh {
     if [[ -z "$1" ]]; then
         echo "Usage: post-json <json string> <address>"
         return 1
+    fi
     docker exec -it "$1" /bin/bash
 }
 
