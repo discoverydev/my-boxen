@@ -17,6 +17,14 @@ class people::discoverydev {
     source => "${boxen::config::repodir}/manifests/files/git-completion.bash"
   }
 
+  file { "/Users/${::boxen_user}/.docker-completion.bash":
+    source => "${boxen::config::repodir}/manifests/files/docker-completion.bash"
+  }
+
+  file { "/Users/${::boxen_user}/.docker-machine-completion.bash":
+    source => "${boxen::config::repodir}/manifests/files/docker-machine-completion.bash"
+  }
+
   file { "sonar-runner.properties":
     name => "${homebrew::config::installdir}/Cellar/sonar-runner/2.5/libexec/conf/sonar-runner.properties",
     source => "${boxen::config::repodir}/manifests/files/sonar-runner.properties",

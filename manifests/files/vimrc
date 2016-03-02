@@ -16,3 +16,6 @@ inoremap jk <esc>
 " make filename completion more like bash
 set wildmode=longest,list,full
 set wildmenu
+
+" yank and other commands will automatically copy to the system clipboard
+"set clipboard=unnamed
