@@ -27,7 +27,24 @@ alias source-profile="source /Users/ga-mlsdiscovery/.profile"
 alias lip="localip"
 # alias rm="trash" (ddaugher - umocmment after all machines are upgraded to xcode 7)
 
-set -o vi
+function docker-sh {
+    if [[ -z "$1" ]]; then
+        echo "Usage: post-json <json string> <address>"
+        return 1
+    docker exec -it "$1" /bin/bash
+}
+
+function post-json {
+    if [[ -z "$1" || -z "$2" ]]; then
+        echo "Usage: post-json <json string> <address>"
+        return 1
+    fi
+    curl -i -H "Content-Type: application/json" -X POST -d "$1" "$2"
+}
+
+function localip {
+    ifconfig | grep 192 | cut -d ' ' -f 2
+} 
 
 # GIT aliases
 alias pull='git pull'
@@ -42,16 +59,5 @@ alias br='git branch'
 alias ac='git add .; git commit -a '
 alias mrg='git merge --no-ff'
 
-function post-json {
-    if [[ -z "$1" || -z "$2" ]]; then
-        echo "Usage: post-json <json string> <address>"
-        return 1
-    fi
-    curl -i -H "Content-Type: application/json" -X POST -d "$1" "$2"
-}
-
-function localip {
-    ifconfig | grep 192 | cut -d ' ' -f 2
-} 
 
 source ~/.git-completion.bash
