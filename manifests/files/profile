@@ -5,49 +5,50 @@ source /opt/boxen/env.sh
 
 # genymotion
 genymotion_version=`ls -l "/opt/homebrew-cask/Caskroom/genymotion" | grep "^d" | rev | cut -d " " -f 1 | rev | tail -n 1`
-export GENYMOTION_HOME=/opt/homebrew-cask/Caskroom/genymotion/$genymotion_version
+export genymotion_home=/opt/homebrew-cask/Caskroom/genymotion/$genymotion_version
 
 # android home
-export ANDROID_HOME=/opt/android-sdk
-export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$GENYMOTION_HOME/Genymotion.app/Contents/MacOS:$GENYMOTION_HOME/Genymotion\ Shell.app/Contents/MacOS:$PATH
+export android_home=/opt/android-sdk
+export path=$android_home/tools:$anDROID_HOME/platform-tools:$GENYMOTION_HOME/Genymotion.app/Contents/MacOS:$GENYMOTION_HOME/Genymotion\ Shell.app/Contents/MacOS:$PATH
 
 # aliases
 alias ll="ls -ltra"
 alias repo="cd /opt/boxen/repo"
 alias boxen="cd /opt/boxen/repo"
-alias shared="cd /Users/Shared"
-alias data="cd /Users/Shared/data"
+alias shared="cd /users/shared"
+alias data="cd /users/shared/data"
 alias src="cd ~/src"
 alias mls="cd ~/src/mls-dev"
 alias sc="cd ~/src/sc-dev"
 alias ..="cd .."
-alias sourcetree="open -a /Applications/Sourcetree.app"
+alias sourcetree="open -a /applications/Sourcetree.app"
 alias dm="docker-machine"
-alias source-profile="source /Users/ga-mlsdiscovery/.profile"
+alias source-profile="source /users/ga-mlsdiscovery/.profile"
 alias lip="localip"
 # alias rm="trash" (ddaugher - umocmment after all machines are upgraded to xcode 7)
 
 function docker-sh {
     if [[ -z "$1" ]]; then
-        echo "Usage: post-json <json string> <address>"
+        echo "usage: docker-sh <container-name>"
+        echo "this executes /bin/sh. Should work on most containers, but you might not have certain bash features you're used to."
         return 1
     fi
-    docker exec -it "$1" /bin/bash
+    docker exec -it "$1" /bin/sh
 }
 
 function post-json {
     if [[ -z "$1" || -z "$2" ]]; then
-        echo "Usage: post-json <json string> <address>"
+        echo "usage: post-json <json string> <address>"
         return 1
     fi
-    curl -i -H "Content-Type: application/json" -X POST -d "$1" "$2"
+    curl -i -h "content-type: application/json" -X POST -d "$1" "$2"
 }
 
 function localip {
     ifconfig | grep 192 | cut -d ' ' -f 2
 } 
 
-# GIT aliases
+# git aliases
 alias pull='git pull'
 alias pullrecurse='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
 alias push='git push'
@@ -60,6 +61,9 @@ alias br='git branch'
 alias ac='git add .; git commit -a '
 alias mrg='git merge --no-ff'
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
 
 source ~/.git-completion.bash
 source ~/.docker-completion.bash
