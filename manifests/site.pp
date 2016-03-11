@@ -139,6 +139,7 @@ node default {
     [
       'ack',               # for searching strings within files at the command-line
       'ant',               # for builds 
+      'bash-completion',   # enables more advanced bash completion features. used by docker bash completion.
       'chromedriver',      # for appium
       'docker',            # to run prebuilt containers, used by ci (stash, jenkins, etc)
       'docker-machine',    # to run docker from os-x
@@ -160,10 +161,10 @@ node default {
       'sonar-runner',      # code quality metrics 
       'ssh-copy-id',       # simplifies installation of ssh keys on remote servers
       'tomcat',            # for deploying .war files (simple-checkout)
+      'tree',              # displays directory tree in command line
       'wget',              # get things from the web (alternative to curl)
       'xctool',            # xcode build, used by sonar
       'carthage',          # xcode dependency management
-      'https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb' # sshpass - used for piping passwords into ssh commands. it is MUCH better to set up a keypair. ask coleman if you don't know how.
     ]: 
     ensure => present,
     require => Exec['tap-discoverydev-ipa'],
