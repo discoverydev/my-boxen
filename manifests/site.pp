@@ -249,6 +249,7 @@ node default {
   host { 'wolverine':  ip => '192.168.8.34' }  
   host { 'beast':      ip => '192.168.8.35' }
   host { 'mystique':   ip => '192.168.8.36' }
+  host { 'negasonic':   ip => '192.168.8.37' }
   
   #
   # CLEAN UP
