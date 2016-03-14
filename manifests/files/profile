@@ -25,14 +25,16 @@ alias sourcetree="open -a /Applications/Sourcetree.app"
 alias dm="docker-machine"
 alias source-profile="source /Users/ga-mlsdiscovery/.profile"
 alias lip="localip"
+# This command will unlock the user keychain without requiring user interaction, which means you can do pretty much anything over ssh"
+alias unlock="security unlock-keychain"
 # alias rm="trash" (ddaugher - umocmment after all machines are upgraded to xcode 7)
 
 function docker-sh {
     if [[ -z "$1" ]]; then
-        echo "Usage: post-json <json string> <address>"
+        echo "Usage: docker-sh <container name>"
         return 1
     fi
-    docker exec -it "$1" /bin/bash
+    docker exec -it "$1" /bin/sh
 }
 
 function post-json {
