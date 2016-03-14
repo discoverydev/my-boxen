@@ -31,7 +31,7 @@ alias unlock="security unlock-keychain"
 
 function docker-sh {
     if [[ -z "$1" ]]; then
-        echo "Usage: docker-sh <container name>"
+        echo "Usage: docker-sh <container-name>"
         return 1
     fi
     docker exec -it "$1" /bin/sh
@@ -62,6 +62,9 @@ alias br='git branch'
 alias ac='git add .; git commit -a '
 alias mrg='git merge --no-ff'
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    source $(brew --prefix)/etc/bash_completion
+fi
 
 source ~/.git-completion.bash
 source ~/.docker-completion.bash
