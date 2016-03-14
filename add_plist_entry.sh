@@ -6,6 +6,6 @@ git clone http://admin@stash/scm/cypher/workstation-files.git /tmp/workstation-f
 
 cp /tmp/workstation-files/LaunchAgents/boxen.update.plist ~/Library/LaunchAgents/boxen.update.plist
 
-#launchctl unload ~/Library/LaunchAgents/boxen.update.plist
+launchctl unload ~/Library/LaunchAgents/boxen.update.plist
 launchctl load ~/Library/LaunchAgents/boxen.update.plist
 launchctl list | grep boxen
