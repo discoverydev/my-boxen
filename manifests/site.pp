@@ -169,10 +169,6 @@ node default {
      ]: 
      ensure => present,
      require => Exec['tap-discoverydev-ipa'],
-
-    ]: 
-    ensure => present,
-    require => Exec['tap-discoverydev-ipa'],
   }
 
   file { '/usr/local/bin':
