@@ -173,10 +173,10 @@ node default {
      require => Exec['tap-discoverydev-ipa'],
   }
 
-  file { '/usr/local/bin':
-    ensure => directory,
-    before => Package['virtualbox']
-  }
+  #file { '/usr/local/bin':
+  #  ensure => directory,
+  #  before => Package['virtualbox']
+  #}
 
   # common, useful packages -- brew-cask
   package { [
