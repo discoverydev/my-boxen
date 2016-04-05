@@ -36,7 +36,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (1.12.0)
+    homebrew (2.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
@@ -46,7 +46,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-java
   specs:
-    java (1.8.2)
+    java (1.8.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-jenkins
@@ -96,7 +96,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-sublime_text
   specs:
-    sublime_text (1.1.0)
+    sublime_text (1.1.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -131,10 +131,10 @@ DEPENDENCIES
   gcc (= 2.2.1)
   git (= 2.7.9)
   go (= 2.1.0)
-  homebrew (= 1.12.0)
+  homebrew (= 2.0.2)
   hub (= 1.4.1)
   inifile (= 1.1.1)
-  java (= 1.8.2)
+  java (= 1.8.4)
   jenkins (= 1.2.0)
   module_data (= 0.0.4)
   nginx (= 1.4.5)
@@ -146,7 +146,7 @@ DEPENDENCIES
   repository (= 2.4.1)
   ruby (= 8.5.2)
   stdlib (= 4.2.1)
-  sublime_text (= 1.1.0)
+  sublime_text (= 1.1.1)
   sudo (= 1.0.0)
   xquartz (= 1.2.1)
 

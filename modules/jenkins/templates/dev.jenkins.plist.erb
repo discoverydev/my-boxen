@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>dev.jenkins</string>
+
+    <key>Boxen</key>
+    <dict>
+      <key>Description</key>
+      <string>A continous integration server.</string>
+
+      <key>Port</key>
+      <integer><%= scope.lookupvar "jenkins::config::port" %></integer>
+    </dict>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>JENKINS_HOME</key>
+      <string><%= scope.lookupvar "jenkins::config::datadir" %></string>
+    </dict>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/bin/java</string>
+      <string>-Xmx<%= scope.lookupvar "jenkins::config::max_heap_size" %></string>
+      <string>-XX:MaxPermSize=<%= scope.lookupvar "jenkins::config::max_perm_size" %></string>
+      <string>-jar</string>
+      <string><%= scope.lookupvar "jenkins::config::warfile" %></string>
+      <string>--httpListenAddress=127.0.0.1</string>
+      <string>--httpPort=<%= scope.lookupvar "jenkins::config::port" %></string>
+      <string>--logfile=<%= scope.lookupvar "jenkins::config::logfile" %></string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true />
+
+    <key>KeepAlive</key>
+    <true />
+
+    <key>UserName</key>
+    <string><%= scope.lookupvar "::luser" %></string>
+
+    <key>StandardErrorPath</key>
+    <string><%= scope.lookupvar "jenkins::config::consolefile" %></string>
+
+    <key>StandardOutPath</key>
+    <string><%= scope.lookupvar "jenkins::config::consolefile" %></string>
+  </dict>
+</plist>
