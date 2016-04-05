@@ -71,32 +71,32 @@ node default {
   }
 
 
-  #
-  # NODE stuff
-  #
-
-  nodejs::version { 'v0.12.2': }
-  class { 'nodejs::global': version => 'v0.12.2' }
-
-  npm_module { "npm": 
-    module       => 'npm',
-    node_version => $version
-  }
-
-  npm_module { 'appium':
-    module       => 'appium@1.4.13',
-    node_version => $version
-  }
-
-  npm_module { 'ios-sim':
-    module       => 'ios-sim',
-    node_version => $version
-  }
-
-  npm_module { 'phantomjs': 
-    module       => 'phantomjs',
-    node_version => $version
-  }
+#  #
+#  # NODE stuff
+#  #
+#
+#  nodejs::version { 'v0.12.2': }
+#  class { 'nodejs::global': version => 'v0.12.2' }
+#
+#  npm_module { "npm": 
+#    module       => 'npm',
+#    node_version => $version
+#  }
+#
+#  npm_module { 'appium':
+#    module       => 'appium@1.4.13',
+#    node_version => $version
+#  }
+#
+#  npm_module { 'ios-sim':
+#    module       => 'ios-sim',
+#    node_version => $version
+#  }
+#
+#  npm_module { 'phantomjs': 
+#    module       => 'phantomjs',
+#    node_version => $version
+#  }
 
   #
   # RUBY stuff

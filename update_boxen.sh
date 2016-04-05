@@ -1,7 +1,7 @@
 #!/bin/bash -l
 echo "updating boxen"
 cd /opt/boxen/repo
-git checkout ads
+git checkout update-boxen
 git pull
 
 echo "kill xcode"
