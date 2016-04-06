@@ -230,15 +230,10 @@ node default {
     unless => "/usr/sbin/DevToolsSecurity | grep 'already enabled'"
   }
 
-  exec { 'set-up-dynatrace-adk': # Dynatrace instrumentation utility
-    command => "${boxen::config::repodir}/manifests/scripts/set-up-dynatrace-adk.sh",
-    creates => '/opt/dynatrace',
-  }
-
-  exec { 'install_imagemagick_fonts': # Tell ImageMagick where to find fonts on this system
-    require => Package['imagemagick'],
-    command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
-  }
+  #exec { 'install_imagemagick_fonts': # Tell ImageMagick where to find fonts on this system
+  #  require => Package['imagemagick'],
+  #  command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
+  #}
 
   exec { 'set_up_mockability_server': # General-purpose mock HTTP server
     command => "${boxen::config::repodir}/manifests/scripts/set_up_mockability_server.sh",
