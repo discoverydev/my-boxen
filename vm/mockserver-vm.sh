@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash 
 
 export DOCKER_IMAGE=discoverydev/mock-server
 export DOCKER_CONTAINER=mockserver
@@ -23,6 +23,7 @@ open() {
 
 setup() {
 	cd /Users/Shared/data/mockserver
+    git pull
 	bundle install
 	ruby mock_server_setup.rb
 }
