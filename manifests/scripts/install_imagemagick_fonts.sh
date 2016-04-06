@@ -8,7 +8,7 @@ FONT_DIRS="/System/Library/Fonts /Library/Fonts"
 
 TYPE_GEN="/opt/boxen/repo/manifests/scripts/type_gen"
 
-CELLAR_ROOT="/opt/boxen/homebrew/Cellar"
+CELLAR_ROOT="/usr/local/Cellar"
 IMAGE_MAGICK_VERSION=$(find_imagemagick_version)
 IMAGE_MAGICK_HOME="$CELLAR_ROOT/imagemagick/$IMAGE_MAGICK_VERSION"
 IM_CONFIG="$IMAGE_MAGICK_HOME/etc/ImageMagick-6"

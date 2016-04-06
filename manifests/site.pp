@@ -71,32 +71,33 @@ node default {
   }
 
 
-#  #
-#  # NODE stuff
-#  #
-#
-#  nodejs::version { 'v0.12.2': }
-#  class { 'nodejs::global': version => 'v0.12.2' }
-#
-#  npm_module { "npm": 
-#    module       => 'npm',
-#    node_version => $version
-#  }
-#
-#  npm_module { 'appium':
-#    module       => 'appium@1.4.13',
-#    node_version => $version
-#  }
-#
-#  npm_module { 'ios-sim':
-#    module       => 'ios-sim',
-#    node_version => $version
-#  }
-#
-#  npm_module { 'phantomjs': 
-#    module       => 'phantomjs',
-#    node_version => $version
-#  }
+  #
+  # NODE stuff
+  #
+
+  class { 'nodejs::global': version => '0.12.2' }
+
+  $version = '0.12.2'
+  npm_module { "npm": 
+    module       => 'npm',
+    node_version => $version
+  }
+
+  npm_module { 'appium':
+    module       => 'appium',
+    version      => '1.4.13',
+    node_version => $version
+  }
+
+  npm_module { 'ios-sim':
+    module       => 'ios-sim',
+    node_version => $version
+  }
+
+  npm_module { 'phantomjs': 
+    module       => 'phantomjs-prebuilt',
+    node_version => $version
+  }
 
   #
   # RUBY stuff
@@ -230,10 +231,10 @@ node default {
     unless => "/usr/sbin/DevToolsSecurity | grep 'already enabled'"
   }
 
-  #exec { 'install_imagemagick_fonts': # Tell ImageMagick where to find fonts on this system
-  #  require => Package['imagemagick'],
-  #  command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
-  #}
+  exec { 'install_imagemagick_fonts': # Tell ImageMagick where to find fonts on this system
+    require => Package['imagemagick'],
+    command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
+  }
 
   exec { 'set_up_mockability_server': # General-purpose mock HTTP server
     command => "${boxen::config::repodir}/manifests/scripts/set_up_mockability_server.sh",
