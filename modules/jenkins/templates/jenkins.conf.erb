@@ -1,0 +1,51 @@
+upstream jenkins {
+  server 127.0.0.1:<%= scope.lookupvar "jenkins::config::port" %> fail_timeout=0;
+}
+
+server {
+  access_log <%= scope.lookupvar "jenkins::config::accesslogfile" %>;
+  error_log <%= scope.lookupvar "jenkins::config::errorlogfile" %>;
+  listen 80;
+  server_name jenkins.dev;
+
+  client_max_body_size 50M;
+
+  error_page 500 502 503 504 /50x.html;
+
+  if ($host ~* "www") {
+    rewrite ^(.*)$ http://jenkins.dev$1 permanent;
+    break;
+  }
+
+  location / {
+    proxy_buffering          off;
+    proxy_max_temp_file_size 0;
+    proxy_redirect           off;
+
+    proxy_set_header         X-Real-IP  $remote_addr;
+    proxy_set_header         X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header         Host $http_host;
+
+    proxy_pass   http://jenkins;
+  }
+}
+
+<% if scope.lookupvar "jenkins::config::public_port" %>
+server {
+  access_log <%= scope.lookupvar "jenkins::config::accesslogfile" %>;
+  error_log <%= scope.lookupvar "jenkins::config::errorlogfile" %>;
+  listen <%= @fqdn %>:<%= scope.lookupvar "jenkins::config::port" %>;
+  server_name <%= @fqdn %>;
+
+  location / {
+    proxy_buffering          off;
+    proxy_max_temp_file_size 0;
+    proxy_redirect           off;
+
+    proxy_set_header         X-Real-IP  $remote_addr;
+    proxy_set_header         X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header         Host $http_host;
+    proxy_pass http://jenkins/;
+  }
+}
+<% end %>
