@@ -19,3 +19,5 @@ set wildmenu
 
 " yank and other commands will automatically copy to the system clipboard
 "set clipboard=unnamed
+
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
