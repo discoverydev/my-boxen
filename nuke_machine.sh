@@ -50,7 +50,7 @@ rm -rf ~/Nexus_5_API_21_x86/
 echo "** deleting local Applications"
 rm -rf ~/Applications/
 
-echo "** deleting homebrew-cast directory"
+echo "** deleting homebrew-cask directory"
 rm -rf /opt/homebrew-cask
 echo "** deleting rubies directory"
 rm -rf /opt/rubies
@@ -70,8 +70,7 @@ rm -rf ~/.gemrc ~/.CFUserTextEncoding ~/.profile ~/.gitignore ~/.gitconfig ~/.vi
 
 
 echo "** nuking boxen install"
-cd /opt/boxen/repo
-./script/nuke --force --all
+cd 
+/opt/boxen/repo/script/nuke --force --all
 rm -rf /opt/boxen
 
-cd ~
