@@ -110,10 +110,10 @@ node default {
     gem          => 'bundler',
     ruby_version => '*',
   }
-  #ruby_gem { 'cocoapods': 
-  #  gem          => 'cocoapods',
-  #  ruby_version => '*',
-  #}
+  ruby_gem { 'cocoapods': 
+    gem          => 'cocoapods',
+    ruby_version => '2.2.2',
+  }
   ruby_gem { 'ocunit2junit': # not sure if this is necessary here
     gem          => 'ocunit2junit',
     ruby_version => '*',
@@ -183,7 +183,7 @@ node default {
       'tree',              # displays directory tree in command line
       'wget',              # get things from the web (alternative to curl)
       'xctool',            # xcode build, used by sonar
-      #'carthage',          # xcode dependency management
+      #'discoverydev/ipa/carthage',          # xcode dependency management
 
       'https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb' # sshpass - used for piping passwords into ssh commands. it is MUCH better to set up a keypair. ask coleman if you don't know how. this is used to push to rackspace windows for red lion.
      ]: 
@@ -255,8 +255,8 @@ node default {
   host { 'wolverine':  ip => '192.168.8.34' }  
   host { 'beast':      ip => '192.168.8.35' }
   host { 'mystique':   ip => '192.168.8.36' }
-  host { 'negasonic':   ip => '192.168.8.37' }
-  host { 'apocalypse':   ip => '192.168.8.38' }
+  host { 'negasonic':  ip => '192.168.8.37' }
+  host { 'apocalypse': ip => '192.168.8.38' }
   
   #
   # CLEAN UP
