@@ -237,6 +237,10 @@ node default {
     command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
   }
 
+  exec { 'install-carthage': # Tell ImageMagick where to find fonts on this system
+    command => "${boxen::config::repodir}/manifests/scripts/install-carthage.sh"
+  }
+
   #
   # HOSTNAME to IPs
   #
