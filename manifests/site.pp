@@ -105,14 +105,15 @@ node default {
 
   ruby::version { '2.2.2': }
   class { 'ruby::global': version => '2.2.2' }
+
   ruby_gem { 'bundler':
     gem          => 'bundler',
     ruby_version => '*',
   }
-  ruby_gem { 'cocoapods': 
-    gem          => 'cocoapods',
-    ruby_version => '*',
-  }
+  #ruby_gem { 'cocoapods': 
+  #  gem          => 'cocoapods',
+  #  ruby_version => '*',
+  #}
   ruby_gem { 'ocunit2junit': # not sure if this is necessary here
     gem          => 'ocunit2junit',
     ruby_version => '*',
@@ -182,7 +183,7 @@ node default {
       'tree',              # displays directory tree in command line
       'wget',              # get things from the web (alternative to curl)
       'xctool',            # xcode build, used by sonar
-      'carthage',          # xcode dependency management
+      #'carthage',          # xcode dependency management
 
       'https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb' # sshpass - used for piping passwords into ssh commands. it is MUCH better to set up a keypair. ask coleman if you don't know how. this is used to push to rackspace windows for red lion.
      ]: 
@@ -231,16 +232,10 @@ node default {
     unless => "/usr/sbin/DevToolsSecurity | grep 'already enabled'"
   }
 
-  exec { 'install_imagemagick_fonts': # Tell ImageMagick where to find fonts on this system
-    require => Package['imagemagick'],
-    command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
-  }
-
-  exec { 'set_up_mockability_server': # General-purpose mock HTTP server
-    command => "${boxen::config::repodir}/manifests/scripts/set_up_mockability_server.sh",
-    creates => '/opt/mockability-server',
-  }
-
+  #exec { 'install_imagemagick_fonts': # Tell ImageMagick where to find fonts on this system
+  #  require => Package['imagemagick'],
+  #  command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
+  #}
 
   #
   # HOSTNAME to IPs
