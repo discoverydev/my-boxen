@@ -4,4 +4,5 @@
 # which must be a fact rather than configured with hiera because
 # of how Puppet's custom resource providers work.
 
-# homebrew_root: /usr/local
+homebrew_root: /opt/boxen/homebrew
+
