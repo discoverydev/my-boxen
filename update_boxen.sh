@@ -25,8 +25,13 @@ echo "boxen completed with the following exit code : " $RESULT
 #   - an exit code of '4' means there were failures during the transaction, and 
 #   - an exit code of '6' means there were both changes and failures.
 ############################
-if [ $RESULT -eq 0 ] || [ $RESULT -eq 2 ]
-then
+
+if [ -d "/opt/nodes" ]; then
+    echo "Taking ownership of /opt/nodes"
+    sudo chown -R ga-mlsdiscovery:staff /opt/nodes
+fi
+
+if [[ $RESULT -eq 0 || $RESULT -eq 2 ]]; then
     echo "Boxen was updated successfully."
     echo "Sending results to Jenkins."
     curl http://jenkins/job/Boxen_$(hostname -s)/buildWithParameters?CALLER=BOXEN
