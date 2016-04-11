@@ -232,10 +232,10 @@ node default {
     unless => "/usr/sbin/DevToolsSecurity | grep 'already enabled'"
   }
 
-  #exec { 'install_imagemagick_fonts': # Tell ImageMagick where to find fonts on this system
-  #  require => Package['imagemagick'],
-  #  command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
-  #}
+  exec { 'install_imagemagick_fonts': # Tell ImageMagick where to find fonts on this system
+    require => Package['imagemagick'],
+    command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
+  }
 
   #
   # HOSTNAME to IPs
