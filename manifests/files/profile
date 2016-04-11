@@ -49,6 +49,13 @@ function localip {
     ifconfig | grep 192 | cut -d ' ' -f 2
 } 
 
+function init-boxen-repo { 
+    sudo mkdir -p /opt/boxen
+    sudo chown -R ga-mlsdiscovery:staff /opt
+    git clone https://github.com/discoverydev/my-boxen /opt/boxen/repo
+    cd /opt/boxen/repo
+}
+
 # GIT aliases
 alias pull='git pull'
 alias pullrecurse='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
