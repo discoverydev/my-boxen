@@ -56,6 +56,10 @@ function init-boxen-repo {
     cd /opt/boxen/repo
 }
 
+function setup-prompt { 
+    export PS1="\h:\W \$ "
+}
+
 # GIT aliases
 alias pull='git pull'
 alias pullrecurse='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
