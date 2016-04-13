@@ -9,7 +9,7 @@ source ~/.profile
 echo "* adding $SERVER to known_hosts"
 ssh-keyscan $SERVER > ~/.ssh/known_hosts
 
-TARFILE=tailored_backup.tar
+TARFILE=tailored_backup.tar.gz
 DEST=/opt/android-sdk
 SRC=/Users/$USER/tailored_backup
 
