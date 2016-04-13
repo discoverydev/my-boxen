@@ -19,7 +19,7 @@ mkdir -p $DEST
 pushd $DEST
 echo "  user $USER"
 rsync -ru --progress $USER@$SERVER:$SRC/$TARFILE $DEST/$TARFILE
-tar xkvf $TARFILE
+tar xzkvf $TARFILE
 popd
 
 echo "* create android virtual devices"
