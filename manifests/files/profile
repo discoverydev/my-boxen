@@ -72,7 +72,7 @@ alias log2="clear; git log -20 --format='%Cgreen%h%Creset %C(cyan)%an%Creset - %
 alias br='git branch'
 alias ac='git add .; git commit -a '
 alias mrg='git merge --no-ff'
-alias tree='git log --graph --pretty=oneline --abbrev-commit'
+alias tree='git log --oneline --decorate --all --graph'
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
