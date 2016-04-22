@@ -237,8 +237,15 @@ node default {
     command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
   }
 
-  exec { 'install-carthage': # Tell ImageMagick where to find fonts on this system
+  exec { 'install-carthage': # Install carthage
     command => "${boxen::config::repodir}/manifests/scripts/install-carthage.sh"
+  }
+
+  # install HP printer drivers
+  package { 'HP Printer Drivers':
+    ensure => installed,
+    source => 'http://support.apple.com/downloads/DL907/en_US/hpprinterdriver3.1.dmg',
+    provider => pkgdmg,
   }
 
   #
