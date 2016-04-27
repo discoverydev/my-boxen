@@ -39,4 +39,25 @@ class people::discoverydev {
     require => Package['sonar-runner'],
   }
 
+  ### Copy Xcode Templates
+  file { "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/":
+    ensure => 'directory'
+  }
+
+  file { "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/___FILEBASENAME___.swift":
+    source => "${boxen::config::repodir}/manifests/files/xcode-templates/QuickSpec/___FILEBASENAME___.swift"
+  }
+
+  file { "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/TemplateIcon.png":
+    source => "${boxen::config::repodir}/manifests/files/xcode-templates/QuickSpec/TemplateIcon.png"
+  }
+
+  file { "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/TemplateIcon@2x.png":
+    source => "${boxen::config::repodir}/manifests/files/xcode-templates/QuickSpec/TemplateIcon@2x.png"
+  }
+
+  file { "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/TemplateInfo.plist":
+    source => "${boxen::config::repodir}/manifests/files/xcode-templates/QuickSpec/TemplateInfo.plist"
+  }
+
 }
