@@ -29,6 +29,10 @@ class people::discoverydev {
     source => "${boxen::config::repodir}/manifests/files/ssh-config"
   }
 
+  file { "/Users/${::boxen_user}/.ssh/rc":
+    source => "${boxen::config::repodir}/manifests/files/ssh-rc"
+  }
+
   file { "sonar-runner.properties":
     name => "${homebrew::config::installdir}/Cellar/sonar-runner/2.5/libexec/conf/sonar-runner.properties",
     source => "${boxen::config::repodir}/manifests/files/sonar-runner.properties",

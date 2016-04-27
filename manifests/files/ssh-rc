@@ -1,0 +1,3 @@
+echo "Welcome to $HOSTNAME"
+echo "Please enter the login password to unlock the keychain"
+security unlock-keychain 
