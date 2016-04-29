@@ -25,6 +25,10 @@ class people::discoverydev {
     source => "${boxen::config::repodir}/manifests/files/docker-machine-completion.bash"
   }
 
+  file { "/Users/${::boxen_user}/.ssh":
+    ensure => 'directory'
+  }
+
   file { "/Users/${::boxen_user}/.ssh/config":
     source => "${boxen::config::repodir}/manifests/files/ssh-config"
   }
