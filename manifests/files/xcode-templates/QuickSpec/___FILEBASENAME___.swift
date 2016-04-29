@@ -13,7 +13,7 @@ class ___FILEBASENAME___: QuickSpec {
 
     override func spec() {
 
-        let subject: SubjectClass!
+        var subject: SubjectClass!
 
         describe("") {
 
@@ -27,3 +27,4 @@ class ___FILEBASENAME___: QuickSpec {
         }
     }
 }
+
