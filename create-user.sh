@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash -x
+
 
 NUMBER=$1
 HOST=$2
