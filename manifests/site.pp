@@ -179,6 +179,7 @@ node default {
       'sonar-runner',      # code quality metrics 
       'ssh-copy-id',       # simplifies installation of ssh keys on remote servers
       'swiftlint',         # linter for swift files
+      'tmux',              # terminal multiplexer with session management (it's rad)
       'tomcat',            # for deploying .war files (simple-checkout)
       'tree',              # displays directory tree in command line
       'wget',              # get things from the web (alternative to curl)
