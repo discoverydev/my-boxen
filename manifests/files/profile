@@ -79,6 +79,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
 fi
 
-source ~/.git-completion.bash
-source ~/.docker-completion.bash
-source ~/.docker-machine-completion.bash
+source /Users/ga-mlsdiscovery/.git-completion.bash
+source /Users/ga-mlsdiscovery/.docker-completion.bash
+source /Users/ga-mlsdiscovery/.docker-machine-completion.bash
