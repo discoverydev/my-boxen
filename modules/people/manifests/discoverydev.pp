@@ -37,6 +37,10 @@ class people::discoverydev {
     source => "${boxen::config::repodir}/manifests/files/ssh-rc"
   }
 
+  file { "/etc/pf.conf":
+    source => "${boxen::config::repodir}/manifests/files/pf.conf"
+  }
+
   file { "sonar-runner.properties":
     name => "${homebrew::config::installdir}/Cellar/sonar-runner/2.5/libexec/conf/sonar-runner.properties",
     source => "${boxen::config::repodir}/manifests/files/sonar-runner.properties",
