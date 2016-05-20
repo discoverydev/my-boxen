@@ -41,6 +41,11 @@ class people::discoverydev {
     source => "${boxen::config::repodir}/manifests/files/pf.conf"
   }
 
+  exec { 'firewall config':
+    require => File['/etc/pf.conf'],
+    command => 'sudo pfctl -f /etc/pf.conf'
+  }
+
   file { "sonar-runner.properties":
     name => "${homebrew::config::installdir}/Cellar/sonar-runner/2.5/libexec/conf/sonar-runner.properties",
     source => "${boxen::config::repodir}/manifests/files/sonar-runner.properties",
