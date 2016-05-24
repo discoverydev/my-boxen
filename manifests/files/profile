@@ -28,7 +28,7 @@ alias source-profile="source /Users/ga-mlsdiscovery/.profile"
 alias lip="localip"
 # This command will unlock the user keychain without requiring user interaction, which means you can do pretty much anything over ssh"
 alias unlock="security unlock-keychain"
-# alias rm="trash" (ddaugher - umocmment after all machines are upgraded to xcode 7)
+alias untar="tar -xvzf'
 
 function docker-sh {
     if [[ -z "$1" ]]; then
