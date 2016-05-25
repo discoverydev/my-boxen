@@ -28,7 +28,7 @@ alias source-profile="source /Users/ga-mlsdiscovery/.profile"
 alias lip="localip"
 # This command will unlock the user keychain without requiring user interaction, which means you can do pretty much anything over ssh"
 alias unlock="security unlock-keychain"
-alias untar="tar -xvzf'
+alias untar="tar -xvzf"
 
 function localip {
     ifconfig | grep 192 | cut -d ' ' -f 2
