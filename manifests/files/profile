@@ -30,32 +30,9 @@ alias lip="localip"
 alias unlock="security unlock-keychain"
 alias untar="tar -xvzf'
 
-function docker-sh {
-    if [[ -z "$1" ]]; then
-        echo "Usage: docker-sh <container-name>"
-        return 1
-    fi
-    docker exec -it "$1" /bin/sh
-}
-
-function post-json {
-    if [[ -z "$1" || -z "$2" ]]; then
-        echo "Usage: post-json <json string> <address>"
-        return 1
-    fi
-    curl -i -H "Content-Type: application/json" -X POST -d "$1" "$2"
-}
-
 function localip {
     ifconfig | grep 192 | cut -d ' ' -f 2
 } 
-
-function init-boxen-repo { 
-    sudo mkdir -p /opt/boxen
-    sudo chown -R ga-mlsdiscovery:staff /opt
-    git clone https://github.com/discoverydev/my-boxen /opt/boxen/repo
-    cd /opt/boxen/repo
-}
 
 function setup-prompt { 
     export PS1="\h:\W \$ "
