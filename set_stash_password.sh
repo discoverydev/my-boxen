@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -eu
 
 echo -n "Enter the http://stash password $(whoami): "
 read -s PW
