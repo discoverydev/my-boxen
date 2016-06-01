@@ -1,13 +1,13 @@
-class people::discoverydev::config::gitconfig {
+class people::discoverydev::config::gitconfig ( $email = downcase($hostname) ) {
 
-  # remove the base git config in order to properly install new
+ # remove the base git config in order to properly install new
   file { "/Users/ga-mlsdiscovery/.gitconfig":
     content => '',
   }
-  
+
   git::config::global {
     'user.name':    value => 'Discovery Dev';
-    'user.email':   value => 'adsdiscoveryteam@gmail.com';
+    'user.email':   value => "discoverydev.${email}@gmail.com"; 
     'push.default': value => 'simple';
   }
 
