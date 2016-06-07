@@ -24,3 +24,54 @@ host negasonic
 
 host apocalypse
     hostname apocalypse
+
+host juggernaut
+    hostname juggernaut
+
+host gambit
+    hostname gambit
+
+host magneto
+    hostname magneto
+
+host banshee
+    hostname banshee
+
+host colossus
+    hostname colossus
+
+host longshot
+    hostname longshot
+
+host nightcrawler
+    hostname nightcrawler
+
+host bishop
+    hostname bishop
+
+host iceman
+    hostname iceman
+
+host havok
+    hostname havok
+
+host sabretooth
+    hostname sabretooth
+
+host deadpool
+    hostname deadpool
+
+host phoenix
+    hostname phoenix
+
+host shadowcat
+    hostname shadowcat
+
+host storm
+    hostname storm
+
+host cable
+    hostname cable
+
+host angel
+    hostname angel

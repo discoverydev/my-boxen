@@ -253,6 +253,7 @@ node default {
   # HOSTNAME to IPs
   #
 
+  # aliases by service name
   host { 'jenkins':    ip => '192.168.8.36' }  
   host { 'stash':      ip => '192.168.8.31' }
   host { 'nexus':      ip => '192.168.8.31' }
@@ -261,18 +262,38 @@ node default {
   host { 'sonarqube':  ip => '192.168.8.35' }
   host { 'mockserver': ip => '192.168.8.35' }
 
-  host { 'xavier':     ip => '192.168.8.31' }  
-  host { 'rogue':      ip => '192.168.8.32' }  
-  host { 'warlock':    ip => '192.168.8.33' }  
-  host { 'wolverine':  ip => '192.168.8.34' }  
-  host { 'beast':      ip => '192.168.8.35' }
-  host { 'mystique':   ip => '192.168.8.36' }
-  host { 'negasonic':  ip => '192.168.8.37' }
-  host { 'apocalypse': ip => '192.168.8.38' }
+  # aliases by machine name - CI  
+  host { 'xavier':     ip => '192.168.8.31' } # Pillar
+  host { 'rogue':      ip => '192.168.8.32' } # Pillar 
+  host { 'warlock':    ip => '192.168.8.33' } # Pillar 
+  host { 'wolverine':  ip => '192.168.8.34' } # Pillar 
+  host { 'beast':      ip => '192.168.8.35' } # CAD5IRITSPDISC07 
+  host { 'mystique':   ip => '192.168.8.36' } # CAD4IRITSPDISC18
+  host { 'negasonic':  ip => '192.168.8.37' } # CAD4IRITSPDISC19
+  host { 'apocalypse': ip => '192.168.8.38' } # CAD4IRITSPDISC20
+
+  # aliases by machine name - workstations 
+  # please note that laptops are not aliased here - see the equipment list for details on those
+  host { 'juggernaut'   : ip => '192.168.8.2'  } # CAD5IRITSPDISC01
+  host { 'gambit'       : ip => '192.168.8.3'  } # CAD5IRITSPDISC02
+  host { 'magneto'      : ip => '192.168.8.4'  } # CAD5IRITSPDISC03 
+  host { 'banshee'      : ip => '192.168.8.29' } # CAD5IRITSPDISC04
+  host { 'colossus'     : ip => '192.168.8.6'  } # CAD5IRITSPDISC05
+  host { 'longshot'     : ip => '192.168.8.28' } # CAD5IRITSPDISC08
+  host { 'nightcrawler' : ip => '192.168.8.10' } # CAD5IRITSPDISC09
+  host { 'bishop'       : ip => '192.168.8.11' } # CAD5IRITSPDISC10
+  host { 'iceman'       : ip => '192.168.8.12' } # CAD5IRITSPDISC11
+  host { 'havok'        : ip => '192.168.8.30' } # CAD5IRITSPDISC12
+  host { 'sabretooth'   : ip => '192.168.8.14' } # CAD5IRITSPDISC13
+  host { 'deadpool'     : ip => '192.168.8.18' } # CAD5IRITSPDISC17
+  host { 'phoenix'      : ip => '192.168.8.22' } # CAD5IRITSPDISC21
+  host { 'shadowcat'    : ip => '192.168.8.23' } # CAD5IRITSPDISC22
+  host { 'storm'        : ip => '192.168.8.24' } # CAD5IRITSPDISC23
+  host { 'cable'        : ip => '192.168.8.25' } # CAD5IRITSPDISC24
+  host { 'angel'        : ip => '192.168.8.26' } # CAD5IRITSPDISC25
+
   host { 'retail-jira': ip => '205.144.61.33' }
 
-
-  
   #
   # CLEAN UP
   #
