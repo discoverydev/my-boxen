@@ -55,12 +55,12 @@ class people::discoverydev {
   ### Copy Xcode Templates
   
 
-  file { "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/":
-    ensure => 'directory'
-  }
+  #file { "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/":
+  #}
 
   file { "Xcode Template":
-    path => "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/"
+    ensure => 'directory',
+    path => "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/",
     source => "${boxen::config::repodir}/manifests/files/xcode-templates/QuickSpec/"
     #recurse => true 
   }
