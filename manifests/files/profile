@@ -30,6 +30,11 @@ alias lip="localip"
 alias unlock="security unlock-keychain"
 alias untar="tar -xvzf"
 
+function copy-remote-url {
+    local remote=${1:-origin} 
+    git remote get-url $remote | pbcopy
+}
+    
 function localip {
     ifconfig | grep 192 | cut -d ' ' -f 2
 } 
