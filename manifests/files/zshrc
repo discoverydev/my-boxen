@@ -1,5 +1,7 @@
 # default profile
 
+export SHELL="/bin/zsh"
+
 # boxen environment
 source /opt/boxen/env.sh
 
@@ -54,7 +56,7 @@ alias mrg='git merge --no-ff'
 alias gtree='git log --oneline --decorate --all --graph'
 
 # Set up fpath
-fpath=( "/Users/ga-mlsdiscovery/.zfunctions" $fpath )
+fpath=( "/Users/ga-mlsdiscovery/.zsh" $fpath )
 
 # ZSH prompt system
 autoload -U promptinit && promptinit

@@ -69,8 +69,8 @@ class people::discoverydev {
 
   file { "ZSH Prompt Config":
     ensure => 'directory',
-    path => "/Users/ga-mlsdiscovery/.zfunctions",
-    source => "${boxen::config::repodir}/manifests/files/zfunctions",
+    path => "/Users/ga-mlsdiscovery/.zsh",
+    source => "${boxen::config::repodir}/manifests/files/zsh",
     recurse => true 
   }
 
