@@ -238,9 +238,9 @@ node default {
     command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
   }
 
-  exec { 'install-carthage': # Install carthage
-    command => "${boxen::config::repodir}/manifests/scripts/install-carthage.sh"
-  }
+  #exec { 'install-carthage': # Install carthage
+  #  command => "${boxen::config::repodir}/manifests/scripts/install-carthage.sh"
+  #}
 
   # install HP printer drivers
   package { 'HP Printer Drivers':

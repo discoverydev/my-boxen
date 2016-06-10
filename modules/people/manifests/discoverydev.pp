@@ -54,15 +54,24 @@ class people::discoverydev {
 
   ### Copy Xcode Templates
   
-
-  #file { "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/":
-  #}
-
   file { "Xcode Template":
     ensure => 'directory',
     path => "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/",
     source => "${boxen::config::repodir}/manifests/files/xcode-templates/QuickSpec/"
     #recurse => true 
+  }
+
+  ### ZSH Config 
+
+  file { "/Users/${::boxen_user}/.zshrc":
+    source => "${boxen::config::repodir}/manifests/files/zshrc"
+  }
+
+  file { "ZSH Prompt Config":
+    ensure => 'directory',
+    path => "/Users/ga-mlsdiscovery/.zfunctions",
+    source => "${boxen::config::repodir}/manifests/files/zfunctions",
+    recurse => true 
   }
 
 }
