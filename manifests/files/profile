@@ -39,9 +39,6 @@ function localip {
     ifconfig | grep 192 | cut -d ' ' -f 2
 } 
 
-function setup-prompt { 
-    export PS1="\h:\W \$ "
-}
 
 # GIT aliases
 alias pull='git pull'
@@ -56,6 +53,16 @@ alias br='git branch'
 alias ac='git add .; git commit -a '
 alias mrg='git merge --no-ff'
 alias gtree='git log --oneline --decorate --all --graph'
+
+PATH="${PATH}:/usr/local/bin"
+
+################################################################
+####   Bash specific stuff below this line
+################################################################
+
+function setup-prompt { 
+    export PS1="\h:\W \$ "
+}
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
