@@ -1,8 +1,7 @@
 #!/bin/bash
 
-#USER=ga-mlsdiscovery
 USER=ga-mlsdiscovery
-SERVER=192.168.8.36
+SERVER=192.168.8.36 # mystique
 
 source ~/.profile
 
@@ -10,15 +9,15 @@ echo "* adding $SERVER to known_hosts"
 ssh-keyscan $SERVER > ~/.ssh/known_hosts
 
 TARFILE=tailored_backup.tar.gz
-DEST=/opt/
+DESTINATION=/opt/
 SRC=/Users/$USER/tailored_backup
 
-echo "* copy $TARFILE from $SERVER ($SRC) to $DEST"
-mkdir -p $DEST
+echo "* copy $TARFILE from $SERVER ($SRC) to $DESTINATION"
+mkdir -p $DESTINATION
 
-pushd $DEST
+pushd $DESTINATION
 echo "  user $USER"
-rsync -ru --progress $USER@$SERVER:$SRC/$TARFILE $DEST/$TARFILE
+rsync -ru --progress $USER@$SERVER:$SRC/$TARFILE $DESTINATION/$TARFILE
 tar xzkvf $TARFILE
 popd
 
