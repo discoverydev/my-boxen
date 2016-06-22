@@ -10,11 +10,12 @@
 #  
 ################################################################################
 
-source /Users/ga-mlsdiscovery/.common_shell_profile
+export SHELL="/bin/zsh"
 
-################################################################
-####   zsh specific stuff below this line
-################################################################
+################################################################################
+# Source common profile
+source /Users/ga-mlsdiscovery/.common_shell_profile
+################################################################################
 
 # Set up fpath
 fpath=( "/Users/ga-mlsdiscovery/.zsh" $fpath )
@@ -26,4 +27,3 @@ prompt pure
 # ZSH Completion system
 autoload -U compinit && compinit
 
-export SHELL="/bin/zsh"
