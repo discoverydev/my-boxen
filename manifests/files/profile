@@ -27,3 +27,7 @@ fi
 source /Users/ga-mlsdiscovery/.git-completion.bash
 source /Users/ga-mlsdiscovery/.docker-completion.bash
 source /Users/ga-mlsdiscovery/.docker-machine-completion.bash
+
+#enable colors for iterm2
+export CLICOLOR=1
+export TERM=xterm-256color
