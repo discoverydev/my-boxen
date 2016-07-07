@@ -293,6 +293,7 @@ node default {
   host { 'angel'        : ip => '192.168.8.26' } # CAD5IRITSPDISC25
   host { 'doop'         : ip => '192.168.8.40' }
   host { 'dazzler'      : ip => '192.168.8.5'  }
+  host { 'anole'        : ip => '192.168.8.9'  }
 
   host { 'retail-jira': ip => '205.144.61.33' }
 
