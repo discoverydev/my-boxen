@@ -291,6 +291,7 @@ node default {
   host { 'storm'        : ip => '192.168.8.24' } # CAD5IRITSPDISC23
   host { 'cable'        : ip => '192.168.8.25' } # CAD5IRITSPDISC24
   host { 'angel'        : ip => '192.168.8.26' } # CAD5IRITSPDISC25
+  host { 'doop'         : ip => '192.168.8.40' }
 
   host { 'retail-jira': ip => '205.144.61.33' }
 
