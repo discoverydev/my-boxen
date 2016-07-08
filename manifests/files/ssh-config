@@ -75,3 +75,12 @@ host cable
 
 host angel
     hostname angel
+
+host anole
+    hostname anole
+
+host dazzler
+    hostname dazzler
+
+host doop
+    hostname doop
