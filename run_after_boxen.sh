@@ -21,9 +21,12 @@ rsync -ru --progress $USER@$SERVER:$SRC/$TARFILE $DESTINATION/$TARFILE
 tar xzkvf $TARFILE
 popd
 
-echo "* create android virtual devices"
-gmtool admin create "Google Nexus 5 - 5.0.0 - API 21 - 1080x1920" Nexus_5_API_21_x86
+HAXM_DIR="/opt/android-sdk/extras/intel/Hardware_Accelerated_Execution_Manager"
+sudo ${HAXM_DIR}/silent_install.sh
 
-echo "* run and configure android virtual devices"
-gmtool admin start Nexus_5_API_21_x86
+android update sdk -a -u -t "sys-img-x-86-android-21" # 81
+android update sdk -a -u -t "extra-intel-Hardware_Accelerate_Execution_Manager" # 153
 
+android create avd --name Nexus_5_API_21_TEST -t android-21 -b default/x86 -f  
+
+emulator @Nexus_5_API_21_TEST
