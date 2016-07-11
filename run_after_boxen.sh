@@ -27,6 +27,4 @@ sudo ${HAXM_DIR}/silent_install.sh
 echo 'y' | android update sdk -a -u -t 81
 echo 'y' | android update sdk -a -u -t 153
 
-echo | android create avd --name Nexus_5_API_21_TEST -t android-21 -b default/x86 -f  
-
-emulator @Nexus_5_API_21_TEST &
+echo 'no' | android create avd --name Nexus_5_API_21_Test_Device -t android-21 -b default/x86 -f  
