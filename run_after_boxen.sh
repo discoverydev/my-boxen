@@ -24,9 +24,9 @@ popd
 HAXM_DIR="/opt/android-sdk/extras/intel/Hardware_Accelerated_Execution_Manager"
 sudo ${HAXM_DIR}/silent_install.sh
 
-android update sdk -a -u -t "sys-img-x-86-android-21" # 81
-android update sdk -a -u -t "extra-intel-Hardware_Accelerate_Execution_Manager" # 153
+echo 'y' | android update sdk -a -u -t 81
+echo 'y' | android update sdk -a -u -t 153
 
-android create avd --name Nexus_5_API_21_TEST -t android-21 -b default/x86 -f  
+echo | android create avd --name Nexus_5_API_21_TEST -t android-21 -b default/x86 -f  
 
-emulator @Nexus_5_API_21_TEST
+emulator @Nexus_5_API_21_TEST &
