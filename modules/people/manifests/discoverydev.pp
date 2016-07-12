@@ -79,9 +79,19 @@ class people::discoverydev {
   file { "Xcode Template":
     ensure => 'directory',
     path => "/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/QuickSpec File.xctemplate/",
-    source => "${boxen::config::repodir}/manifests/files/xcode-templates/QuickSpec/"
+    source => "${boxen::config::repodir}/manifests/files/xcode-templates/QuickSpec/",
+    recurse => true 
   }
 
+
+  ### Copy Android 2.1 Preferences
+  
+  file { "Android 2.1 Preferences":
+    ensure => 'directory',
+    path => "/Users/${::boxen_user}/Library/Preferences/AndroidStudio2.1/",
+    source => "${boxen::config::repodir}/manifests/files/AndroidStudio2.1_Preferences/",
+    recurse => true 
+  }
 
   ### Misc
 
