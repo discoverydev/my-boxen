@@ -86,17 +86,12 @@ class projects::workstation {
     cwd => "${workstation_files}/certs"
   }
 
-  #exec { "xcode-distribution":
-  #  require => Exec['update-workstation-files'],
-  #  command => "security import /opt/boxen/repo/certs/XCodeCertificates.p12 -k ~/Library/Keychains/login.keychain -P $(cat /opt/boxen/repo/certs/XCodeCertificates.password)",
-  #  cwd => "${workstation_files}/certs"
-  #}
-
-  exec { "find_shit":
+  exec { "xcode-distribution":
     require => Exec['update-workstation-files'],
-    command => "pwd",
+    command => "security import /opt/boxen/repo/certs/XCodeCertificates.p12 -k ~/Library/Keychains/login.keychain -P $(cat /opt/boxen/repo/certs/XCodeCertificates.password)",
     cwd => "${workstation_files}/certs"
   }
+
 
 
   
