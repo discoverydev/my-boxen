@@ -62,6 +62,16 @@ class projects::workstation {
     source => "${workstation_files}/gradle/gradle.properties",
   }
 
+  ### Android 2.1 Studio Preferences
+  
+  file { "Android Studio 2.1 Preferences":
+    require => [File['gradle'],Exec['update-workstation-files']],
+    ensure => 'directory',
+    path => "/Users/${::boxen_user}/Library/Preferences/AndroidStudio2.1/",
+    source => "${workstation_files}/AndroidStudio2.1_Preferences/",
+    recurse => true 
+  }
+
   #
   # keychain certificates
   #
