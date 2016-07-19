@@ -24,6 +24,10 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
 fi
 
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
 source /Users/ga-mlsdiscovery/.git-completion.bash
 source /Users/ga-mlsdiscovery/.docker-completion.bash
 source /Users/ga-mlsdiscovery/.docker-machine-completion.bash

@@ -158,6 +158,7 @@ node default {
       'ack',               # for searching strings within files at the command-line
       'ant',               # for builds 
       'bash-completion',   # enables more advanced bash completion features. used by docker bash completion.
+      'bash-git-prompt',   # Display git branch, change info in the bash prompt
       'chromedriver',      # for appium
       'docker',            # to run prebuilt containers, used by ci (stash, jenkins, etc)
       'docker-machine',    # to run docker from os-x
@@ -305,3 +306,4 @@ node default {
   package { 'android-sdk': ensure => absent }   # instead, custom pre-populated android-sdk installed after boxen
 
 }
+
