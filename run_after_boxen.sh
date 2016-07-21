@@ -8,7 +8,7 @@ source ~/.profile
 echo "* adding ${SERVER} to known_hosts"
 ssh-keyscan ${SERVER} > ~/.ssh/known_hosts
 
-TARFILE=taylored_swift.tar.gz
+TARFILE=tailored_backup.tar.gz
 DESTINATION=/opt/
 SRC=/Users/${USER}/tailored_backup
 
