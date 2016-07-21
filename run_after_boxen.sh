@@ -36,6 +36,6 @@ get_android_pkg 'extra-intel-Hardware_Accelerated_Execution_Manager'
 
 echo 'no' | android create avd --name Nexus_5_API_21_Test_Device -t android-21 -b default/x86 -f  
 
-cp ${DESTINATION}/android-sdk/test_device_config.ini /Users/${USER}/.android/avd/Nexus_5_API_21_Test_Device.avd/config.ini 
+cp ${DESTINATION}android-sdk/test_device_config.ini /Users/${USER}/.android/avd/Nexus_5_API_21_Test_Device.avd/config.ini 
 
 android list avds
