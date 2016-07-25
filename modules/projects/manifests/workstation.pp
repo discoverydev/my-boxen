@@ -96,11 +96,11 @@ class projects::workstation {
     cwd => "${workstation_files}/certs"
   }
 
-  exec { "xcode-distribution":
-    require => Exec['update-workstation-files'],
-    command => "security import XCodeCertificates.p12 -k ~/Library/Keychains/login.keychain -P $(cat XCodeCertificates.password)",
-    cwd => "${workstation_files}/certs"
-  }
+  #exec { "xcode-distribution":
+  #  require => Exec['update-workstation-files'],
+  #  command => "security import XCodeCertificates.p12 -k ~/Library/Keychains/login.keychain -P $(cat XCodeCertificates.password)",
+  #  cwd => "${workstation_files}/certs"
+  #}
 
 
 
