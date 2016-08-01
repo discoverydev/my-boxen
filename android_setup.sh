@@ -33,8 +33,8 @@ get_android_pkg(){
     echo 'y' | android update sdk -a -u -t ${pkg_id}
 }
 
-get_android_pkg 'sys-img-x86_64-google_apis-21'
-get_android_pkg 'extra-intel-Hardware_Accelerated_Execution_Manager'
+#get_android_pkg 'sys-img-x86_64-google_apis-21'
+#get_android_pkg 'extra-intel-Hardware_Accelerated_Execution_Manager'
 
 AVD_NAME='Nexus_5_API_21_Test_Device'
 AVD_PATH='/Users/${USER}/.android/avd/${AVD_NAME}' 
