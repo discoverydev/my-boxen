@@ -104,6 +104,7 @@ node default {
   #
 
   ruby::version { '2.2.2': }
+  ruby::version { '2.0.0-p648': }
   class { 'ruby::global': version => '2.2.2' }
 
   ruby_gem { 'bundler':
