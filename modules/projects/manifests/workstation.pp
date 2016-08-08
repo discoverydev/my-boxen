@@ -117,12 +117,12 @@ class projects::workstation {
 }
 
 
-  $local_pipeline_setup = "${boxen::config::srcdir}/local_pipeline_setup"
+  #$local_pipeline_setup = "${boxen::config::srcdir}/local_pipeline_setup"
 
-  repository { 'local_pipeline_setup':
-    path => $local_pipeline_setup,
-    source => "http://${::boxen_user}@stash/scm/mls/local_pipeline_setup.git",
-    ensure => master,
-  }
+  #repository { 'local_pipeline_setup':
+  #  path => $local_pipeline_setup,
+  #  source => "http://${::boxen_user}@stash/scm/mls/local_pipeline_setup.git",
+  #  ensure => master,
+  #}
 
 }
