@@ -256,23 +256,23 @@ node default {
   #
 
   # aliases by service name
-  host { 'jenkins':    ip => '192.168.8.36' }  
-  host { 'stash':      ip => '192.168.8.31' }
-  host { 'nexus':      ip => '192.168.8.31' }
-  host { 'tomcat':     ip => '192.168.8.32' }
-  host { 'confluence': ip => '192.168.8.34' }
-  host { 'sonarqube':  ip => '192.168.8.35' }
-  host { 'mockserver': ip => '192.168.8.35' }
+  host { 'jenkins'      : ip => '192.168.8.36' }  
+  host { 'stash'        : ip => '192.168.8.31' }
+  host { 'nexus'        : ip => '192.168.8.31' }
+  host { 'tomcat'       : ip => '192.168.8.32' }
+  host { 'confluence'   : ip => '192.168.8.34' }
+  host { 'sonarqube'    : ip => '192.168.8.35' }
+  host { 'mockserver'   : ip => '192.168.8.35' }
 
   # aliases by machine name - CI  
-  host { 'xavier':     ip => '192.168.8.31' } # Pillar
-  host { 'rogue':      ip => '192.168.8.32' } # Pillar 
-  host { 'warlock':    ip => '192.168.8.33' } # Pillar 
-  host { 'wolverine':  ip => '192.168.8.34' } # Pillar 
-  host { 'beast':      ip => '192.168.8.35' } # CAD5IRITSPDISC07 
-  host { 'mystique':   ip => '192.168.8.36' } # CAD4IRITSPDISC18
-  host { 'negasonic':  ip => '192.168.8.37' } # CAD4IRITSPDISC19
-  host { 'apocalypse': ip => '192.168.8.38' } # CAD4IRITSPDISC20
+  host { 'xavier'       : ip => '192.168.8.31' } # Pillar
+  host { 'rogue'        : ip => '192.168.8.32' } # Pillar 
+  host { 'warlock'      : ip => '192.168.8.33' } # Pillar 
+  host { 'wolverine'    : ip => '192.168.8.34' } # Pillar 
+  host { 'beast'        : ip => '192.168.8.35' } # CAD5IRITSPDISC07 
+  host { 'mystique'     : ip => '192.168.8.36' } # CAD4IRITSPDISC18
+  host { 'negasonic'    : ip => '192.168.8.37' } # CAD4IRITSPDISC19
+  host { 'apocalypse'   : ip => '192.168.8.38' } # CAD4IRITSPDISC20
 
   # aliases by machine name - workstations 
   # please note that laptops are not aliased here - see the equipment list for details on those
@@ -293,9 +293,12 @@ node default {
   host { 'storm'        : ip => '192.168.8.24' } # CAD5IRITSPDISC23
   host { 'cable'        : ip => '192.168.8.25' } # CAD5IRITSPDISC24
   host { 'angel'        : ip => '192.168.8.26' } # CAD5IRITSPDISC25
-  host { 'doop'         : ip => '192.168.8.40' }
-  host { 'dazzler'      : ip => '192.168.8.5'  }
-  host { 'anole'        : ip => '192.168.8.9'  }
+  host { 'doop'         : ip => '192.168.8.40' } # CAD4IRITSPDISC26
+  host { 'dazzler'      : ip => '192.168.8.5'  } # CAD4IRITSPDISC27
+  host { 'anole'        : ip => '192.168.8.9'  } # CAD4IRITSBDISC28
+  host { 'stryker'      : ip => '192.168.8.42' } # CAD4IRITSBDISC29
+  host { 'rogue'        : ip => '192.168.8.44' } # CAD4IRITSBDISC30
+  host { 'bastion'      : ip => '192.168.8.45' } # CAD4IRITSBDISC31
 
   host { 'retail-jira': ip => '205.144.61.33' }
 
