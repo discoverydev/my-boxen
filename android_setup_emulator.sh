@@ -1,5 +1,8 @@
 #!/bin/bash
 
+DESTINATION="/opt"
+USER="ga-mlsdiscovery"
+
 get_android_pkg(){
     # gets the id number of the pkg - necessary because they change
     local pkg_id=$(android list sdk --all -e | grep $1 | cut -d ' ' -f 2)   
