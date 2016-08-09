@@ -84,3 +84,9 @@ host dazzler
 
 host doop
     hostname doop
+
+host stryker
+    hostname stryker
+
+host bastion
+    hostname bastion

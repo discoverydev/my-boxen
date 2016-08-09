@@ -266,7 +266,6 @@ node default {
 
   # aliases by machine name - CI  
   host { 'xavier'       : ip => '192.168.8.31' } # Pillar
-  host { 'rogue'        : ip => '192.168.8.32' } # Pillar 
   host { 'warlock'      : ip => '192.168.8.33' } # Pillar 
   host { 'wolverine'    : ip => '192.168.8.34' } # Pillar 
   host { 'beast'        : ip => '192.168.8.35' } # CAD5IRITSPDISC07 
