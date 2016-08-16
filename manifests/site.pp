@@ -299,7 +299,11 @@ node default {
   host { 'bastion'      : ip => '192.168.8.44' } # CAD4IRITSBDISC31
   host { 'rogue'        : ip => '192.168.8.45' } # CAD4IRITSBDISC30
 
-  host { 'retail-jira': ip => '205.144.61.33' }
+  host { 'retail-jira'          : ip => '205.144.60.35' }
+  host { 'retail-stash'         : ip => '205.144.60.35' }
+  host { 'retail-nexus'         : ip => '205.144.60.35' }
+  host { 'retail-confluence'    : ip => '205.144.60.35' }
+  host { 'retail-jenkins'       : ip => '205.144.60.35' }
 
   #
   # CLEAN UP
