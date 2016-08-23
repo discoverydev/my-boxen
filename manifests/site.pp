@@ -205,7 +205,7 @@ node default {
       'google-hangouts',   # communication tool
       'intellij1416',      # IDE all the things
       'iterm2',            # terminal replacement
-      'java',              # java 8
+      #'java',              # java 8. commented out for now as ADS remotely updates the jdk in line with corp policy
       'qlgradle',          # quicklook for gradle files
       'qlmarkdown',        # quicklook for md files
       'qlprettypatch',     # quicklook for patch files
