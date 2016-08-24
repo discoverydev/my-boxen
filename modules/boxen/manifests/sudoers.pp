@@ -33,11 +33,4 @@ class boxen::sudoers {
     ],
     type     => 'user_spec',
   }
-
-  sudoers { 'minion-sudo': 
-    users => ['minion1', 'minion2', 'minion3', 'minion4'],
-    hosts => 'ALL',
-    commands => [ '(ALL) NOPASSWD:ALL' ],
-    type => 'user_spec',   
-  }
 }
