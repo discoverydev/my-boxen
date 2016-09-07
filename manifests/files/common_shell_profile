@@ -68,6 +68,11 @@ alias br='git branch'
 alias ac='git add .; git commit -a '
 alias mrg='git merge --no-ff'
 alias gtree='git log --oneline --decorate --all --graph'
+alias co='git checkout'
+alias diff='git diff'
+alias rebase='git rebase'
+alias stash='git stash'
+alias logfiles='git log --oneline --name-only'
 
 PATH="${PATH}:/usr/local/bin"
 

@@ -1,1 +1,2 @@
 git::global_excludesfile: "/opt/boxen/repo/manifests/files/global-git-ignore"
+hub::alias_hub_to_git: false
