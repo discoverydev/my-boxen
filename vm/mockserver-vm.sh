@@ -6,7 +6,7 @@ export DOCKER_CONTAINER_PUBLISH="--publish=1080:1080 --publish=1090:1090"
 export DOCKER_CONTAINER_ENV="--env JAVA_OPTS=-Xmx2g"
 export DOCKER_VM_MEMORY=3072
 
-source docker-vm_lib.sh
+#source docker-vm_lib.sh
 
 _setupvm() {
 	nat ${DOCKER_CONTAINER}-http 1080 1080
@@ -27,4 +27,11 @@ setup() {
 	ruby mock_server_setup.rb
 }
 
-for arg in "$@"; do $arg; done
+#for arg in "$@"; do $arg; done
+
+echo " ================================================== HEYOOOOOO ====================================================="
+echo "If you're seeing this message, you're trying to use the old, docker-machine version of the mockserver scripts."
+echo "The implementation of the mockserver docker container has changed to eliminate the dependency on docker-machine."
+echo "Please see the readme in the mockserver repo for instructions on how to run, restart, and otherwise use mockserver."
+echo "And, as always, if you need more help - go ask Coleman."
+echo " ================================================== /HEYOOOOOO ====================================================="
