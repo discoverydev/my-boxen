@@ -203,6 +203,7 @@ node default {
       'genymotion',        # android in virtualbox (faster)
       'google-chrome',     # browser
       'google-hangouts',   # communication tool
+      #'intellij1416',      # IDE all the things
       'iterm2',            # terminal replacement
       #'java',              # java 8. commented out for now as ADS remotely updates the jdk in line with corp policy
       'qlgradle',          # quicklook for gradle files

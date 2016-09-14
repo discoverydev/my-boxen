@@ -2,6 +2,7 @@
 #
 class nginx(
   $ensure = present,
+  $port = 80,
 ) {
   include nginx::config
   include homebrew
@@ -55,8 +56,11 @@ class nginx(
       }
 
       package { 'boxen/brews/nginx':
-        ensure => '1.8.0-boxen2',
-        notify => Service['dev.nginx']
+        ensure          => '1.10.0-boxen1',
+        install_options => [
+          '--with-http2',
+        ],
+        notify          => Service['dev.nginx']
       }
 
       # Remove Homebrew's nginx config to avoid confusion.
