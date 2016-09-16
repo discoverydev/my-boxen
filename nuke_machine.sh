@@ -6,18 +6,11 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-echo "** shutting boot2docker down"
-boot2docker down
-echo "* deleting any existing boot2docker images"
-boot2docker delete
-
 echo "* quitting any running instances of VirtualBox"
 osascript -e 'quit app "VirtualBox"'
 
 echo "* shutting down local jenkins instance"
 curl --silent --request POST "http://localhost:8080/exit"
-
-DATA_DIR=/Users/Shared/data
 
 read -p "do you want to delete the 'src' directory?: (Y/n)" DELETE_SRC
 DELETE_SRC=${DELETE_SRC:-y}
@@ -66,11 +59,9 @@ echo "** deleting dynatrace"
 rm -rf /opt/dynatrace
 
 echo "** deleting various dot files"
-rm -rf ~/.gemrc ~/.CFUserTextEncoding ~/.profile ~/.gitignore ~/.gitconfig ~/.viminfo ~/.lesshst
-
+rm -rf ~/.gemrc ~/.CFUserTextEncoding ~/.profile ~/.gitignore ~/.gitconfig ~/.viminfo ~/.lesshst ~/.common_shell_profile ~/.zshrc ~/.vimrc ~/.docker-completion.bash ~/.git-completion.bash 
 
 echo "** nuking boxen install"
-cd 
+cd ~
 /opt/boxen/repo/script/nuke --force --all
 rm -rf /opt/boxen
-

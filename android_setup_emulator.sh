@@ -17,7 +17,8 @@ get_android_pkg(){
 
     if [[ -z "$pkg_path" || ! -e "$pkg_path" ]]; then
         echo "Fetching $pkg_name"
-        get_android_pkg_by_name "$pkg_name"
+        echo 'y' | android update sdk -a -u -t ${pkg_name}
+        #get_android_pkg_by_name "$pkg_name"
     else 
         echo "Android Package ${pkg_name} already exists, not downloading."
         echo "You can delete ${pkg_path} to force an update." 
@@ -45,9 +46,9 @@ emu_21_img="sys-img-x86_64-google_apis-21"
 emu_21_path="${ANDROID_SDK_PATH}/system-images/android-21/google_apis/x86_64/"
 get_android_pkg $emu_21_img $emu_21_path
 
-#emu_23_img="sys-img-x86_64-google_apis-23"
-#emu_23_path="${ANDROID_SDK_PATH}/system-images/android-23/google_apis/x86_64/"
-#get_android_pkg $emu_23_img $emu_23_path 
+emu_23_img="sys-img-x86_64-google_apis-23"
+emu_23_path="${ANDROID_SDK_PATH}/system-images/android-23/google_apis/x86_64/"
+get_android_pkg $emu_23_img $emu_23_path 
 
 get_android_pkg 'extra-intel-Hardware_Accelerated_Execution_Manager'
 HAXM_DIR="/opt/android-sdk/extras/intel/Hardware_Accelerated_Execution_Manager"
@@ -57,7 +58,8 @@ create_emulator(){
     local avd_name=$1
     local avd_platform=$2
     local avd_img=$3
-    local avd_path='/Users/${USER}/.android/avd/${avd_name}' 
+    local avd_path="/Users/${USER}/.android/avd/${avd_name}"
+    echo "avd path: $avd_path"
 
     rm -f '${AVD_PATH}.ini'
     rm -rf '${AVD_PATH}.avd'
@@ -68,11 +70,11 @@ create_emulator(){
     echo "Image: $avd_img" 
     echo 'no' | android create avd --name "$avd_name" -t "$avd_platform" -b "$avd_img" -f  
 
-    cp /opt/boxen/repo/android-configs/${avd_name}-config.ini ${avd_path}.avd/config.ini 
+    cp "/opt/boxen/repo/android-configs/${avd_name}-config.ini" "${avd_path}.avd/config.ini"
 }
 
 create_emulator 'Nexus_5_API_16_Test_Device' 'android-16' 'google_apis/x86'
 create_emulator 'Nexus_5_API_21_Test_Device' 'android-21' 'google_apis/x86_64'
-#create_emulator 'Nexus_5_API_23_Test_Device' 'android-23' 'google_apis/x86_64'
+create_emulator 'Nexus_5_API_23_Test_Device' 'android-23' 'google_apis/x86_64'
 
 android list avds
