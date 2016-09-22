@@ -127,7 +127,10 @@ node default {
     gem          => 'rspec',
     ruby_version => '*',
   }
-
+  ruby_gem { 'xcpretty':
+    gem          => 'xcpretty',
+    ruby_version => '*',
+  }
 
   #
   # PYTHON stuff
