@@ -161,7 +161,7 @@ node default {
       'bash-completion',   # enables more advanced bash completion features. used by docker bash completion.
       'bash-git-prompt',   # Display git branch, change info in the bash prompt
       'chromedriver',      # for appium
-      'docker',            # to run prebuilt containers, used by ci (stash, jenkins, etc)
+  #    'docker',            # to run prebuilt containers, used by ci (stash, jenkins, etc)
       'docker-machine',    # to run docker from os-x
       'dos2unix',          # some Java cmd-line utilities are Windows-specific
       'git',               # 
