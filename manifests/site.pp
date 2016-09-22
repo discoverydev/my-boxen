@@ -200,6 +200,7 @@ node default {
       'appium1413',        # for testing mobile emulators, simulators, and devices
       'caffeine',          # keep the machine from sleeping
       'citrix-receiver',   # Citrix VPN
+      'docker',            # it's docker
       'genymotion',        # android in virtualbox (faster)
       'google-chrome',     # browser
       'google-hangouts',   # communication tool
