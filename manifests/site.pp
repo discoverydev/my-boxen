@@ -245,6 +245,10 @@ node default {
     command => "${boxen::config::repodir}/manifests/scripts/install-carthage.sh"
   }
 
+  exec { 'install-vim-pathogen': # Install vim pathogen
+    command => "${boxen::config::repodir}/manifests/scripts/install-vim-pathogen.sh"
+  }
+
   # install HP printer drivers
   package { 'HP Printer Drivers':
     ensure => installed,
