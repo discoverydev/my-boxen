@@ -127,7 +127,10 @@ node default {
     gem          => 'rspec',
     ruby_version => '*',
   }
-
+  ruby_gem { 'xcpretty':
+    gem          => 'xcpretty',
+    ruby_version => '*',
+  }
 
   #
   # PYTHON stuff
@@ -161,7 +164,7 @@ node default {
       'bash-completion',   # enables more advanced bash completion features. used by docker bash completion.
       'bash-git-prompt',   # Display git branch, change info in the bash prompt
       'chromedriver',      # for appium
-      'docker',            # to run prebuilt containers, used by ci (stash, jenkins, etc)
+  #    'docker',            # to run prebuilt containers, used by ci (stash, jenkins, etc)
       'docker-machine',    # to run docker from os-x
       'dos2unix',          # some Java cmd-line utilities are Windows-specific
       'git',               # 
@@ -200,6 +203,7 @@ node default {
       'appium1413',        # for testing mobile emulators, simulators, and devices
       'caffeine',          # keep the machine from sleeping
       'citrix-receiver',   # Citrix VPN
+      'docker',            # it's docker
       'genymotion',        # android in virtualbox (faster)
       'google-chrome',     # browser
       'google-hangouts',   # communication tool
@@ -242,6 +246,10 @@ node default {
 
   exec { 'install-carthage': # Install carthage
     command => "${boxen::config::repodir}/manifests/scripts/install-carthage.sh"
+  }
+
+  exec { 'install-vim-pathogen': # Install vim pathogen
+    command => "${boxen::config::repodir}/manifests/scripts/install-vim-pathogen.sh"
   }
 
   # install HP printer drivers
