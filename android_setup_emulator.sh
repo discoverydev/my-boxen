@@ -37,6 +37,13 @@ get_android_pkg_by_name(){
 get_android_platform 'android-16'
 get_android_platform 'android-21'
 get_android_platform 'android-23'
+get_android_platform 'android-24'
+
+get_android_pkg 'build-tools-23.0.3' "${ANDROID_SDK_PATH}/build-tools/23.0.3"
+get_android_pkg 'build-tools-24.0.2' "${ANDROID_SDK_PATH}/build-tools/24.0.2"
+get_android_pkg 'build-tools-24.0.1' "${ANDROID_SDK_PATH}/build-tools/24.0.1"
+get_android_pkg 'source-23' "${ANDROID_SDK_PATH}/sources/android-23"
+get_android_pkg 'source-24' "${ANDROID_SDK_PATH}/sources/android-24"
 
 emu_16_img="sys-img-x86-google_apis-16"
 emu_16_path="${ANDROID_SDK_PATH}/system-images/android-16/google_apis/x86/"
@@ -49,6 +56,10 @@ get_android_pkg $emu_21_img $emu_21_path
 emu_23_img="sys-img-x86_64-google_apis-23"
 emu_23_path="${ANDROID_SDK_PATH}/system-images/android-23/google_apis/x86_64/"
 get_android_pkg $emu_23_img $emu_23_path 
+
+emu_24_img="sys-img-x86_64-google_apis-24"
+emu_24_path="${ANDROID_SDK_PATH}/system-images/android-24/google_apis/x86_64/"
+get_android_pkg $emu_24_img $emu_24_path
 
 get_android_pkg 'extra-intel-Hardware_Accelerated_Execution_Manager'
 HAXM_DIR="/opt/android-sdk/extras/intel/Hardware_Accelerated_Execution_Manager"
@@ -76,5 +87,6 @@ create_emulator(){
 create_emulator 'Nexus_5_API_16_Test_Device' 'android-16' 'google_apis/x86'
 create_emulator 'Nexus_5_API_21_Test_Device' 'android-21' 'google_apis/x86_64'
 create_emulator 'Nexus_5_API_23_Test_Device' 'android-23' 'google_apis/x86_64'
+create_emulator 'Nexus_5_API_24_Test_Device' 'android-24' 'google_apis/x86_64'
 
 android list avds
