@@ -44,6 +44,7 @@ get_android_pkg 'build-tools-24.0.2' "${ANDROID_SDK_PATH}/build-tools/24.0.2"
 get_android_pkg 'build-tools-24.0.1' "${ANDROID_SDK_PATH}/build-tools/24.0.1"
 get_android_pkg 'source-23' "${ANDROID_SDK_PATH}/sources/android-23"
 get_android_pkg 'source-24' "${ANDROID_SDK_PATH}/sources/android-24"
+get_android_pkg 'extra-android-m2repository'
 
 emu_16_img="sys-img-x86-google_apis-16"
 emu_16_path="${ANDROID_SDK_PATH}/system-images/android-16/google_apis/x86/"
