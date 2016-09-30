@@ -131,6 +131,10 @@ node default {
     gem          => 'xcpretty',
     ruby_version => '*',
   }
+  ruby_gem { 'sigh':
+    gem          => 'sigh',
+    ruby_version => '*',
+  }
 
   #
   # PYTHON stuff
