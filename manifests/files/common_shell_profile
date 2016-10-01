@@ -45,6 +45,10 @@ alias lip="localip"
 alias unlock="security unlock-keychain"
 alias untar="tar -xvzf"
 
+function ss {
+    open vnc://ga-mlsdiscovery:M0bileL0yalty@${1}
+}
+
 function copy-remote-url {
     local remote=${1:-origin} 
     git remote get-url $remote | pbcopy
