@@ -269,6 +269,7 @@ node default {
 
   # aliases by service name
   host { 'jenkins'      : ip => '192.168.8.36'  }  
+  host { 'jenkins2'     : ip => '192.168.8.44'  }  
   host { 'stash'        : ip => '192.168.8.37'  }
   host { 'nexus'        : ip => '192.168.8.37'  }
   host { 'tomcat'       : ip => '192.168.8.32'  }
