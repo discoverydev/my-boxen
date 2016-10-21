@@ -77,6 +77,7 @@ alias diff='git diff'
 alias rebase='git rebase'
 alias stash='git stash'
 alias logfiles='git log --oneline --name-only'
+alias gutcheck='git checkout'
 
 PATH="${PATH}:/usr/local/bin"
 
