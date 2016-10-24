@@ -276,6 +276,8 @@ node default {
   host { 'confluence'   : ip => '205.144.60.35' }
   host { 'sonarqube'    : ip => '192.168.8.35'  }
   host { 'mockserver'   : ip => '192.168.8.35'  }
+  host { 'poq'          : ip => '192.168.8.35'  }
+  host { 'yard'         : ip => '192.168.8.35'  }
 
   # aliases by machine name - CI  
   host { 'xavier'       : ip => '192.168.8.31' } # Pillar
