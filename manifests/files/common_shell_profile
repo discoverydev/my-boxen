@@ -44,6 +44,7 @@ alias lip="localip"
 # This command will unlock the user keychain without requiring user interaction, which means you can do pretty much anything over ssh"
 alias unlock="security unlock-keychain"
 alias untar="tar -xvzf"
+alias qc="quick-clone"
 
 function ss {
     open vnc://ga-mlsdiscovery:M0bileL0yalty@${1}
@@ -58,6 +59,16 @@ function localip {
     ifconfig | grep 192 | cut -d ' ' -f 2
 } 
 
+function quick-clone {
+    local clone_url=${1}
+    local target_dir=${2}
+
+    if [[ ! $clone_url =~ "\/" ]]; then
+        git clone http://stash/scm/mls/${clone_url} ${target_dir}
+    else
+        git clone http://stash/scm/${clone_url} ${target_dir}
+    fi
+}
 
 # GIT aliases
 alias pull='git pull'
