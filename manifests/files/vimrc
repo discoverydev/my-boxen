@@ -8,16 +8,17 @@ set number
 set expandtab 
 set tabstop=4
 
-"mappings
-
-" hit jk in insert mode to switch back to normal mode
-inoremap jk <esc>
+"make >> and << commands indent/unindent 4 spaces like a reasonable person would want
+set shiftwidth=4
 
 " make filename completion more like bash
 set wildmode=longest,list,full
 set wildmenu
 
-" yank and other commands will automatically copy to the system clipboard
-"set clipboard=unnamed
-
+" tell vim that .md means markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+"mappings
+
+" hit jk in insert mode to switch back to normal mode
+inoremap jk <esc>
