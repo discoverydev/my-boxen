@@ -44,7 +44,7 @@ alias lip="localip"
 # This command will unlock the user keychain without requiring user interaction, which means you can do pretty much anything over ssh"
 alias unlock="security unlock-keychain"
 alias untar="tar -xvzf"
-alias qc="quick-clone"
+alias clone="quick-clone"
 
 function ss {
     open vnc://ga-mlsdiscovery:M0bileL0yalty@${1}
@@ -68,6 +68,13 @@ function quick-clone {
     else
         git clone http://stash/scm/${clone_url} ${target_dir}
     fi
+}
+
+function quick-commit-generator(){
+    local number=${1}
+    local name=${2}
+
+    eval "function qc() { git commit -am \"$number $name - \${1}\" }"
 }
 
 # GIT aliases
