@@ -45,6 +45,7 @@ alias lip="localip"
 alias unlock="security unlock-keychain"
 alias untar="tar -xvzf"
 alias clone="quick-clone"
+alias qcgen="quick-commit-generator"
 
 function ss {
     open vnc://ga-mlsdiscovery:M0bileL0yalty@${1}
