@@ -75,17 +75,18 @@ node default {
   # NODE stuff
   #
 
-  class { 'nodejs::global': version => '0.12.2' }
+  class { 'nodejs::global': version => '4.0.0' }
 
-  $version = '0.12.2'
+  $version = '4.0.0'
   npm_module { "npm": 
     module       => 'npm',
+    version      => '3.0.0',
     node_version => $version
   }
 
   npm_module { 'appium':
     module       => 'appium',
-    version      => '1.4.13',
+    version      => '1.6.0',
     node_version => $version
   }
 
@@ -96,6 +97,16 @@ node default {
 
   npm_module { 'phantomjs': 
     module       => 'phantomjs-prebuilt',
+    node_version => $version
+  }
+
+  npm_module { 'ios-deploy':
+    module => 'ios-deploy',
+    node_version => $version
+  }
+
+  npm_module { 'deviceconsole':
+    module => 'deviceconsole',
     node_version => $version
   }
 
