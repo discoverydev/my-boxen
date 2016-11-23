@@ -142,8 +142,8 @@ node default {
     gem          => 'xcpretty',
     ruby_version => '*',
   }
-  ruby_gem { 'sigh':
-    gem          => 'sigh',
+  ruby_gem { 'fastlane':
+    gem          => 'fastlane',
     ruby_version => '*',
   }
 
