@@ -196,7 +196,7 @@ node default {
       'rbenv',             # ruby environment manager
       'sbt',               # scala build tool (for Gimbal Geofence Importer)
       'scala',             # scala language (for Gimbal Geofence Importer)
-      'sonar-runner',      # code quality metrics 
+      #'sonar-runner',      # code quality metrics 
       'ssh-copy-id',       # simplifies installation of ssh keys on remote servers
       'swiftlint',         # linter for swift files
       'tmux',              # terminal multiplexer with session management (it's rad)
@@ -219,7 +219,8 @@ node default {
       'caffeine',          # keep the machine from sleeping
       'citrix-receiver',   # Citrix VPN
       'docker',            # it's docker
-      'genymotion',        # android in virtualbox (faster)
+      'firefox',           # browser
+      'genymotion',        # android in virtualbox (faster). 
       'google-chrome',     # browser
       'google-hangouts',   # communication tool
       #'intellij1416',      # IDE all the things
@@ -237,13 +238,6 @@ node default {
     ensure => present,
     require => Exec['tap-discoverydev-ipa'],
   }
-
-  exec { 'firefox':
-    require => Class['homebrew'],
-    command => 'sudo brew cask install firefox --appdir=/Applications --force',
-    creates => '/Applications/Firefox.app',
-  }
-
 
   #
   # MANUAL STUFF
