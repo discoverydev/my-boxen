@@ -63,7 +63,7 @@ node default {
   include brewcask
 
   include sublime_text
-  # sublime_text::package { 'Emmet': source => 'sergeche/emmet-sublime' } 
+  # sublime_text::package { 'Emmet': source => 'sergeche/emmet-sublime' }
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
@@ -78,7 +78,7 @@ node default {
   class { 'nodejs::global': version => '4.0.0' }
 
   $version = '4.0.0'
-  npm_module { "npm": 
+  npm_module { "npm":
     module       => 'npm',
     version      => '3.0.0',
     node_version => $version
@@ -95,7 +95,7 @@ node default {
     node_version => $version
   }
 
-  npm_module { 'phantomjs': 
+  npm_module { 'phantomjs':
     module       => 'phantomjs-prebuilt',
     node_version => $version
   }
@@ -122,7 +122,7 @@ node default {
     gem          => 'bundler',
     ruby_version => '*',
   }
-  ruby_gem { 'cocoapods': 
+  ruby_gem { 'cocoapods':
     gem          => 'cocoapods',
     ruby_version => '2.2.2',
   }
@@ -130,7 +130,7 @@ node default {
     gem          => 'ocunit2junit',
     ruby_version => '*',
   }
-  ruby_gem { 'appium_console': 
+  ruby_gem { 'appium_console':
     gem          => 'appium_console',
     ruby_version => '*',
   }
@@ -161,7 +161,10 @@ node default {
     command => 'sudo pip install virtualenv',
     creates => '/usr/local/bin/virtualenv',
   }
-
+  exec { 'mock': # python testing tool
+    require => Exec['pip'],
+    command => 'pip install --upgrade mock --user'
+  }
 
   #
   # BREW and BREW CASKS
@@ -175,14 +178,14 @@ node default {
   package {
     [
       'ack',               # for searching strings within files at the command-line
-      'ant',               # for builds 
+      'ant',               # for builds
       'bash-completion',   # enables more advanced bash completion features. used by docker bash completion.
       'bash-git-prompt',   # Display git branch, change info in the bash prompt
       'chromedriver',      # for appium
   #    'docker',            # to run prebuilt containers, used by ci (stash, jenkins, etc)
       'docker-machine',    # to run docker from os-x
       'dos2unix',          # some Java cmd-line utilities are Windows-specific
-      'git',               # 
+      'git',               #
       'gradle',            # for builds
       'grails',            # application framework (for simple checkout sample)
       'groovy',            # groovy language (for simple checkout)
@@ -196,7 +199,7 @@ node default {
       'rbenv',             # ruby environment manager
       'sbt',               # scala build tool (for Gimbal Geofence Importer)
       'scala',             # scala language (for Gimbal Geofence Importer)
-      #'sonar-runner',      # code quality metrics 
+      #'sonar-runner',      # code quality metrics
       'ssh-copy-id',       # simplifies installation of ssh keys on remote servers
       'swiftlint',         # linter for swift files
       'tmux',              # terminal multiplexer with session management (it's rad)
@@ -207,7 +210,7 @@ node default {
       #'discoverydev/ipa/carthage',          # xcode dependency management
 
       'https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb' # sshpass - used for piping passwords into ssh commands. it is MUCH better to set up a keypair. ask coleman if you don't know how. this is used to push to rackspace windows for red lion.
-     ]: 
+     ]:
      ensure => present,
      require => Exec['tap-discoverydev-ipa'],
   }
@@ -220,7 +223,7 @@ node default {
       'citrix-receiver',   # Citrix VPN
       'docker',            # it's docker
       'firefox',           # browser
-      'genymotion',        # android in virtualbox (faster). 
+      'genymotion',        # android in virtualbox (faster).
       'google-chrome',     # browser
       'google-hangouts',   # communication tool
       #'intellij1416',      # IDE all the things
@@ -234,7 +237,7 @@ node default {
       'sourcetree',        # Atlassian Sourcetree
       'virtualbox',        # VM for docker-machine, genymotion, etc
     ]:
-    provider => 'brewcask', 
+    provider => 'brewcask',
     ensure => present,
     require => Exec['tap-discoverydev-ipa'],
   }
@@ -273,8 +276,8 @@ node default {
   #
 
   # aliases by service name
-  host { 'jenkins'      : ip => '192.168.8.36'  }  
-  host { 'jenkins2'     : ip => '192.168.8.44'  }  
+  host { 'jenkins'      : ip => '192.168.8.36'  }
+  host { 'jenkins2'     : ip => '192.168.8.44'  }
   host { 'stash'        : ip => '192.168.8.37'  }
   host { 'nexus'        : ip => '192.168.8.37'  }
   host { 'tomcat'       : ip => '192.168.8.32'  }
@@ -284,20 +287,20 @@ node default {
   host { 'poq'          : ip => '192.168.8.35'  }
   host { 'yard'         : ip => '192.168.8.35'  }
 
-  # aliases by machine name - CI  
+  # aliases by machine name - CI
   host { 'xavier'       : ip => '192.168.8.31' } # Pillar
-  host { 'warlock'      : ip => '192.168.8.33' } # Pillar 
-  host { 'wolverine'    : ip => '192.168.8.34' } # Pillar 
-  host { 'beast'        : ip => '192.168.8.35' } # CAD5IRITSPDISC07 
+  host { 'warlock'      : ip => '192.168.8.33' } # Pillar
+  host { 'wolverine'    : ip => '192.168.8.34' } # Pillar
+  host { 'beast'        : ip => '192.168.8.35' } # CAD5IRITSPDISC07
   host { 'mystique'     : ip => '192.168.8.36' } # CAD4IRITSPDISC18
   host { 'negasonic'    : ip => '192.168.8.37' } # CAD4IRITSPDISC19
   host { 'apocalypse'   : ip => '192.168.8.38' } # CAD4IRITSPDISC20
 
-  # aliases by machine name - workstations 
+  # aliases by machine name - workstations
   # please note that laptops are not aliased here - see the equipment list for details on those
   host { 'juggernaut'   : ip => '192.168.8.2'  } # CAD5IRITSPDISC01
   host { 'gambit'       : ip => '192.168.8.3'  } # CAD5IRITSPDISC02
-  host { 'magneto'      : ip => '192.168.8.4'  } # CAD5IRITSPDISC03 
+  host { 'magneto'      : ip => '192.168.8.4'  } # CAD5IRITSPDISC03
   host { 'banshee'      : ip => '192.168.8.29' } # CAD5IRITSPDISC04
   host { 'colossus'     : ip => '192.168.8.6'  } # CAD5IRITSPDISC05
   host { 'longshot'     : ip => '192.168.8.28' } # CAD5IRITSPDISC08
@@ -328,9 +331,8 @@ node default {
   #
   # CLEAN UP
   #
-  
+
   # packages that should not be present anymore
   package { 'android-sdk': ensure => absent }   # instead, custom pre-populated android-sdk installed after boxen
 
 }
-
