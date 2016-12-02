@@ -172,6 +172,11 @@ node default {
     command => "${boxen::config::repodir}/python_env/bin/pip install --upgrade mock",
   }
 
+  exec { 'install_python_nose': # python testing tool
+    require => Exec['create_virtual_environment'],
+    command => "${boxen::config::repodir}/python_env/bin/pip install --upgrade nose",
+  }
+
   #
   # BREW and BREW CASKS
   #
