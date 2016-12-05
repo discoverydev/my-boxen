@@ -219,6 +219,7 @@ node default {
   package { [
       'android-studio',    # IDE for android coding
       'appium1413',        # for testing mobile emulators, simulators, and devices
+      'atom',              # edit text
       'caffeine',          # keep the machine from sleeping
       'citrix-receiver',   # Citrix VPN
       'docker',            # it's docker
