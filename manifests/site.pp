@@ -153,17 +153,25 @@ node default {
 
   # geofencing uses python scripts
   exec { 'pip':  # python package manager
-    command => 'sudo easy_install pip',
+    command => 'easy_install pip',
     creates => '/usr/local/bin/pip',
   }
   exec { 'virtualenv':  # python environment manager
     require => Exec['pip'],
-    command => 'sudo pip install virtualenv',
+    command => 'pip install virtualenv',
     creates => '/usr/local/bin/virtualenv',
   }
-  exec { 'mock': # python testing tool
-    require => Exec['pip'],
-    command => 'pip install --upgrade mock --user'
+  exec { 'create_virtual_environment':
+    require => Exec['virtualenv'],
+    command => 'virtualenv python_env',
+  }
+  exec { 'install_python_mock': # python testing tool
+    require => Exec['create_virtual_environment'],
+    command => "${boxen::config::repodir}/python_env/bin/pip install --upgrade mock",
+  }
+  exec { 'install_python_nose': # python testing tool
+    require => Exec['create_virtual_environment'],
+    command => "${boxen::config::repodir}/python_env/bin/pip install --upgrade nose",
   }
 
   #

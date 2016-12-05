@@ -15,3 +15,4 @@ npm-debug.log
 *.iws
 *.DS_Store/*
 .idea/
+python_env
