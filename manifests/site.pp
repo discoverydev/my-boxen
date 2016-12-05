@@ -161,17 +161,14 @@ node default {
     command => 'pip install virtualenv',
     creates => '/usr/local/bin/virtualenv',
   }
-
   exec { 'create_virtual_environment':
     require => Exec['virtualenv'],
     command => 'virtualenv python_env',
   }
-
   exec { 'install_python_mock': # python testing tool
     require => Exec['create_virtual_environment'],
     command => "${boxen::config::repodir}/python_env/bin/pip install --upgrade mock",
   }
-
   exec { 'install_python_nose': # python testing tool
     require => Exec['create_virtual_environment'],
     command => "${boxen::config::repodir}/python_env/bin/pip install --upgrade nose",
