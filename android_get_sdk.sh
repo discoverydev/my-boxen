@@ -35,4 +35,7 @@ fi
 popd
 
 HAXM_DIR="/opt/android-sdk/extras/intel/Hardware_Accelerated_Execution_Manager"
-sudo ${HAXM_DIR}/silent_install.sh
+
+if [ ! 'kextstat | grep intel' ]; then
+    sudo ${HAXM_DIR}/silent_install.sh
+fi
