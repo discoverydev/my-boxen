@@ -193,6 +193,7 @@ node default {
   #    'docker',            # to run prebuilt containers, used by ci (stash, jenkins, etc)
       'docker-machine',    # to run docker from os-x
       'dos2unix',          # some Java cmd-line utilities are Windows-specific
+      'fabric',            # python based tool for interacting with multiple machines
       'git',               #
       'gradle',            # for builds
       'grails',            # application framework (for simple checkout sample)
