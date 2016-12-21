@@ -34,7 +34,7 @@ fi
 if [[ $RESULT -eq 0 || $RESULT -eq 2 ]]; then
     echo "Boxen was updated successfully."
     echo "Sending results to Jenkins."
-    curl http://jenkins/job/Boxen_$(hostname -s)/buildWithParameters?CALLER=BOXEN
+    curl -X POST http://jenkins2/job/Boxen_$(hostname -s)/buildWithParameters?CALLER=BOXEN
     . /opt/boxen/env.sh
 else 
     echo "Boxen was NOT updated successfully."
