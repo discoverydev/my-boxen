@@ -6,16 +6,22 @@ reload() {
   launchctl load $agent_path
 }
 
+place_plist() { 
+    cp /tmp/workstation-files/LaunchAgents/${1} ~/Library/LaunchAgents/${1}
+}
+
 echo "adding boxen.update.plist to launchctl... possibly removed by ADS push to machine."
 rm -rf /tmp/workstation-files
 git clone http://admin@stash/scm/cypher/workstation-files.git /tmp/workstation-files
 
-cp /tmp/workstation-files/LaunchAgents/boxen.update.plist ~/Library/LaunchAgents/boxen.update.plist
-cp /tmp/workstation-files/LaunchAgents/cleanup.mac.plist ~/Library/LaunchAgents/cleanup.mac.plist
 
+place_plist 'boxen.update.plist'
+place_plist 'cleanup.mac.plist'
+place_plist 'disk.check.plist'
 
 reload 'boxen.update.plist'
 reload 'cleanup.mac.plist'
+reload 'disk.check.plist'
 
 launchctl list | grep boxen
 launchctl list | grep cleanup
