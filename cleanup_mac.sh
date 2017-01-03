@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 rm -rf /Users/ga-mlsdiscovery/Library/Developer/Xcode/DerivedData
 rm -rf /Library/Caches/com.apple.dt.instruments
