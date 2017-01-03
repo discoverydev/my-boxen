@@ -17,11 +17,11 @@ git clone http://admin@stash/scm/cypher/workstation-files.git /tmp/workstation-f
 
 place_plist 'boxen.update.plist'
 place_plist 'cleanup.mac.plist'
-place_plist 'disk.check.plist'
+place_plist 'disk.usage.plist'
 
 reload 'boxen.update.plist'
 reload 'cleanup.mac.plist'
-reload 'disk.check.plist'
+reload 'disk.usage.plist'
 
 launchctl list | grep boxen
 launchctl list | grep cleanup
