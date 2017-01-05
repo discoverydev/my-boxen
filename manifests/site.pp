@@ -140,7 +140,11 @@ node default {
   }
   ruby_gem { 'xcpretty':
     gem          => 'xcpretty',
-    ruby_version => '*',
+    ruby_version => '2.0.0',
+  }
+  ruby_gem { 'xcpretty for 2.2':
+    gem          => 'xcpretty',
+    ruby_version => '2.2.2',
   }
   ruby_gem { 'fastlane':
     gem          => 'fastlane',
