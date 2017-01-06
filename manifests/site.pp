@@ -204,6 +204,7 @@ node default {
       'groovy',            # groovy language (for simple checkout)
       'ideviceinstaller',  # for appium on ios devices
       'imagemagick',       # for (aot) imprinting icons with version numbers
+      'jshon',             # jshon
       'maven',             # for builds
       'mockserver',        # for mocking servers for testing
       'openssl',           # for ssl

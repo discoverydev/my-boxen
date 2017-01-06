@@ -6,10 +6,11 @@ class people::discoverydev::config::gitconfig ( $email = downcase($hostname) ) {
   }
 
   git::config::global {
-    'user.name':    value => 'Discovery Dev';
-    'user.email':   value => "discoverydev.${email}@gmail.com"; 
-    'push.default': value => 'simple';
-    'alias.nuke':   value => 'reset --hard HEAD'
+    'user.name'                  : value => 'Discovery Dev';
+    'user.email'                 : value => "discoverydev.${email}@gmail.com"; 
+    'push.default'               : value => 'simple';
+    'alias.nuke'                 : value => 'reset --hard HEAD';
+    'status.showUntrackedFiles'  : value => 'all';
   }
 
 }
