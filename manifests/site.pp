@@ -86,7 +86,7 @@ node default {
 
   npm_module { 'appium':
     module       => 'appium',
-    version      => '1.6.0',
+    version      => '1.6.3',
     node_version => $version
   }
 
