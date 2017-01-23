@@ -38,12 +38,15 @@ get_android_platform 'android-16'
 get_android_platform 'android-21'
 get_android_platform 'android-23'
 get_android_platform 'android-24'
+get_android_platform 'android-25'
 
 get_android_pkg 'build-tools-23.0.3' "${ANDROID_SDK_PATH}/build-tools/23.0.3"
 get_android_pkg 'build-tools-24.0.2' "${ANDROID_SDK_PATH}/build-tools/24.0.2"
 get_android_pkg 'build-tools-24.0.1' "${ANDROID_SDK_PATH}/build-tools/24.0.1"
+get_android_pkg 'build-tools-25.0.2' "${ANDROID_SDK_PATH}/build-tools/25.0.2"
 get_android_pkg 'source-23' "${ANDROID_SDK_PATH}/sources/android-23"
 get_android_pkg 'source-24' "${ANDROID_SDK_PATH}/sources/android-24"
+get_android_pkg 'source-25' "${ANDROID_SDK_PATH}/sources/android-25"
 get_android_pkg 'extra-android-m2repository'
 
 emu_16_img="sys-img-x86-google_apis-16"
@@ -89,5 +92,6 @@ create_emulator 'Nexus_5_API_16_Test_Device' 'android-16' 'google_apis/x86'
 create_emulator 'Nexus_5_API_21_Test_Device' 'android-21' 'google_apis/x86_64'
 create_emulator 'Nexus_5_API_23_Test_Device' 'android-23' 'google_apis/x86_64'
 create_emulator 'Nexus_5_API_24_Test_Device' 'android-24' 'google_apis/x86_64'
+create_emulator 'Nexus-5_API_25_Test_Device' 'android-25' 'google_apis/x86_64'
 
 android list avds
