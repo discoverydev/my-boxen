@@ -20,11 +20,11 @@ class projects::workstation {
   # genymotion licenses
   #
 
-  exec { 'genymotion-license-registration': 
-    require => Exec['update-workstation-files'],
-    command => "bash -c ./register.sh",
-    cwd => "${workstation_files}/genymotion"
-  }
+  #exec { 'genymotion-license-registration': 
+  #  require => Exec['update-workstation-files'],
+  #  command => "bash -c ./register.sh",
+  #  cwd => "${workstation_files}/genymotion"
+  #}
 
   #
   # maven global settings
