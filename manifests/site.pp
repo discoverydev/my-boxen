@@ -203,7 +203,7 @@ node default {
       'grails',            # application framework (for simple checkout sample)
       'groovy',            # groovy language (for simple checkout)
       'ideviceinstaller',  # for appium on ios devices
-      'imagemagick',       # for (aot) imprinting icons with version numbers
+      'imagemagick@6',       # for (aot) imprinting icons with version numbers
       'jshon',             # jshon
       'maven',             # for builds
       'mockserver',        # for mocking servers for testing
@@ -268,7 +268,7 @@ node default {
   }
 
   exec { 'install_imagemagick_fonts': # Tell ImageMagick where to find fonts on this system
-    require => Package['imagemagick'],
+    require => Package['imagemagick@6'],
     command => "${boxen::config::repodir}/manifests/scripts/install_imagemagick_fonts.sh"
   }
 
