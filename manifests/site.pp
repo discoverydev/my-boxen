@@ -157,12 +157,12 @@ node default {
 
   # geofencing uses python scripts
   exec { 'pip':  # python package manager
-    command => 'easy_install pip',
+    command => 'sudo easy_install pip',
     creates => '/usr/local/bin/pip',
   }
   exec { 'virtualenv':  # python environment manager
     require => Exec['pip'],
-    command => 'pip install virtualenv',
+    command => 'sudo pip install virtualenv',
     creates => '/usr/local/bin/virtualenv',
   }
   exec { 'create_virtual_environment':
