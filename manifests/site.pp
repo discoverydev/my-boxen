@@ -132,7 +132,7 @@ node default {
   }
   ruby_gem { 'appium_console':
     gem          => 'appium_console',
-    ruby_version => '*',
+    ruby_version => '2.2.2',
   }
   ruby_gem { 'rspec':
     gem          => 'rspec',
