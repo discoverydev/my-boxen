@@ -148,7 +148,7 @@ node default {
   }
   ruby_gem { 'fastlane':
     gem          => 'fastlane',
-    ruby_version => '*',
+    ruby_version => '2.2.2',
   }
 
   #
