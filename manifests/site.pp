@@ -238,7 +238,7 @@ node default {
       'citrix-receiver',   # Citrix VPN
       'docker',            # it's docker
       'firefox',           # browser
-      'genymotion',        # android in virtualbox (faster).
+      #'genymotion',        # android in virtualbox (faster). commented for now because we now use the default android emulator which ships with the sdk.
       'google-chrome',     # browser
       'google-hangouts',   # communication tool
       'grandperspective',  # disk inspection util
