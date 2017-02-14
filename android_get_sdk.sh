@@ -23,7 +23,7 @@ echo "  user ${USER}"
 if [[ -e ${DESTINATION}/${ANDROID_SDK} ]]; then
     echo "Android SDK detected - updating from gold image"
     echo "remove /opt/android-sdk to force a full redownload of the SDK."
-    rsync -au --progress ${USER}@${SERVER}:${SRC}/${ANDROID_SDK} ${DESTINATION}/${ANDROID_SDK}
+    rsync -au --progress ${USER}@${SERVER}:${SRC}/${ANDROID_SDK} ${DESTINATION}
 else 
     echo "No Android SDK detected - cloning from gold image"
     echo "rsync --progress ${USER}@${SERVER}:${SRC}/${TARFILE} ${DESTINATION}/${TARFILE} "
