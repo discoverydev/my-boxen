@@ -280,6 +280,10 @@ node default {
     command => "${boxen::config::repodir}/manifests/scripts/install-vim-pathogen.sh"
   }
 
+  exec { 'no-bash-profile': # remove ~/.bash_profile if it's there - we use ~/.profile
+    command => "rm -f /Users/ga-mlsdiscovery/.bash_profile"
+  }
+
   # install HP printer drivers
   package { 'HP Printer Drivers':
     ensure => installed,
