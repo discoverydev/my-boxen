@@ -292,7 +292,6 @@ node default {
   #
 
   # aliases by service name
-  host { 'jenkins'      : ip => '192.168.8.36'  }
   host { 'jenkins2'     : ip => '192.168.8.44'  }
   host { 'stash'        : ip => '192.168.8.37'  }
   host { 'nexus'        : ip => '192.168.8.37'  }
@@ -300,7 +299,6 @@ node default {
   host { 'confluence'   : ip => '205.144.60.35' }
   host { 'sonarqube'    : ip => '192.168.8.35'  }
   host { 'mockserver'   : ip => '192.168.8.35'  }
-  host { 'poq'          : ip => '192.168.8.35'  }
   host { 'yard'         : ip => '192.168.8.35'  }
 
   # aliases by machine name - CI
