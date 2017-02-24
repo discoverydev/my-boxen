@@ -203,7 +203,7 @@ node default {
       'grails',            # application framework (for simple checkout sample)
       'groovy',            # groovy language (for simple checkout)
       'ideviceinstaller',  # for appium on ios devices
-      'imagemagick@6',       # for (aot) imprinting icons with version numbers
+      'imagemagick@6',     # for (aot) imprinting icons with version numbers
       'jshon',             # jshon
       'maven',             # for builds
       'mockserver',        # for mocking servers for testing
@@ -213,7 +213,7 @@ node default {
       'rbenv',             # ruby environment manager
       'sbt',               # scala build tool (for Gimbal Geofence Importer)
       'scala',             # scala language (for Gimbal Geofence Importer)
-      #'sonar-runner',      # code quality metrics
+      #'sonar-runner',     # code quality metrics
       'ssh-copy-id',       # simplifies installation of ssh keys on remote servers
       'swiftlint',         # linter for swift files
       'tmux',              # terminal multiplexer with session management (it's rad)
