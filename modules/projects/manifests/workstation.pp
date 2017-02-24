@@ -110,11 +110,11 @@ class projects::workstation {
   # xcode provisioning
   #
 
-  exec { "mobileprovisions":
-    require => [Exec['update-workstation-files'],Exec['iphone-distribution']],
-    cwd => $workstation_files,
-    command => "bash -c 'for f in mobileprovisions/*; do open \$f; osascript -e \"tell app \\\"Xcode\\\" to quit\"; done'",
-}
+  #exec { "mobileprovisions":
+  #  require => [Exec['update-workstation-files'],Exec['iphone-distribution']],
+  #  cwd => $workstation_files,
+  #  command => "bash -c 'for f in mobileprovisions/*; do open \$f; osascript -e \"tell app \\\"Xcode\\\" to quit\"; done'",
+  #}
 
 
   #$local_pipeline_setup = "${boxen::config::srcdir}/local_pipeline_setup"
