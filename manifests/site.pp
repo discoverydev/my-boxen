@@ -320,7 +320,7 @@ node default {
 
   # aliases by machine name - workstations
   # please note that laptops are not aliased here - see the equipment list for details on those
-  host { 'juggernaut'   : ip => '192.168.8.2'  } # CAD5IRITSPDISC01
+  host { 'juggernaut'   : ip => '192.168.8.140'  } # CAD5IRITSPDISC01
   host { 'gambit'       : ip => '192.168.8.3'  } # CAD5IRITSPDISC02
   host { 'magneto'      : ip => '192.168.8.4'  } # CAD5IRITSPDISC03
   host { 'banshee'      : ip => '192.168.8.29' } # CAD5IRITSPDISC04
