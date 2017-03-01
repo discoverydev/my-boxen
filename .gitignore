@@ -15,5 +15,5 @@ npm-debug.log
 *.iws
 *.DS_Store/*
 .idea/
-python_env
+python_env/
 .ruby-version
