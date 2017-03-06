@@ -27,4 +27,5 @@ reload 'jenkins2.node.plist'
 
 launchctl list | grep boxen
 launchctl list | grep cleanup
+launchctl list | grep disk
 launchctl list | grep jenkins2
