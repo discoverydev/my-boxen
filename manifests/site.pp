@@ -150,6 +150,10 @@ node default {
     gem          => 'fastlane',
     ruby_version => '2.2.2',
   }
+  ruby_gem { 'pry-coolline':
+    gem          => 'pry-coolline',
+    ruby_version => '*',
+  }
 
   #
   # PYTHON stuff
