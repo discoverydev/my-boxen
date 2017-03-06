@@ -75,12 +75,11 @@ node default {
   # NODE stuff
   #
 
-  class { 'nodejs::global': version => '4.0.0' }
+  class { 'nodejs::global': version => '7.7.1' }
 
-  $version = '4.0.0'
+  $version = '7.7.1'
   npm_module { "npm":
     module       => 'npm',
-    version      => '3.0.0',
     node_version => $version
   }
 
