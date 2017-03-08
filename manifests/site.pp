@@ -346,7 +346,6 @@ node default {
   host { 'stryker'      : ip => '192.168.8.42' } # CAD4IRITSBDISC29
   host { 'bastion'      : ip => '192.168.8.44' } # CAD4IRITSBDISC31
   host { 'rogue'        : ip => '192.168.8.45' } # CAD4IRITSBDISC30
-  host { 'photon1'      : ip => '192.168.8.46' } 
 
   host { 'retail-jira'          : ip => '205.144.60.35' }
   host { 'retail-stash'         : ip => '205.144.60.35' }
