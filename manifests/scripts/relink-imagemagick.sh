@@ -3,5 +3,5 @@
 convert > /dev/null 
 
 if [[ $? == 127 ]]; then
-    echo "it ain't linked"
+    brew link --force imagemagick@6
 fi
