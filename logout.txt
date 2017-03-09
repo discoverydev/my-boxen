@@ -1,1 +1,0 @@
-{"response":{"clientReturnHeader":{"returnCode":"01900","returnMessage":"User successfully logged out","returnStatus":"S"}}}
