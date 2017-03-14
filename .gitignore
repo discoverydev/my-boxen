@@ -16,4 +16,3 @@ npm-debug.log
 *.DS_Store/*
 .idea/
 python_env/
-.ruby-version
