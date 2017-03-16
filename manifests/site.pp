@@ -348,6 +348,18 @@ node default {
   host { 'retail-confluence'    : ip => '205.144.60.35' }
   host { 'retail-jenkins'       : ip => '205.144.60.35' }
 
+  # yellow lion laptops 
+
+  host { 'warpath'        : ip => '192.168.8.52' } #
+  host { 'photon1'        : ip => '192.168.8.46' } #CAD4MRITSPDISC32
+  host { 'photon2'        : ip => '192.168.8.54' } #CAD4MRITSPDISC33
+  host { 'photon3'        : ip => '192.168.8.57' } #CAD4MRITSPDISC37
+  host { 'photon4'        : ip => '192.168.8.48' } #CAD4MRITSBDISC45
+  host { 'photon5'        : ip => '192.168.8.59' } #CAD4MRITSPDISC39 
+  host { 'photon6'        : ip => '192.168.8.58' } #CAD4MRITSPDISC38
+  host { 'photon7'        : ip => '192.168.8.60' } #CAD4MRITSPDISC40
+  host { 'photon8'        : ip => '192.168.8.67' } #CAD4MRITSPDISC48
+  host { 'photon9'        : ip => '192.168.8.71' } #CAD4MRITSPDISC52
   #
   # CLEAN UP
   #
