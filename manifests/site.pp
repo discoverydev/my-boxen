@@ -360,6 +360,7 @@ node default {
   host { 'photon7'        : ip => '192.168.8.60' } #CAD4MRITSPDISC40
   host { 'photon8'        : ip => '192.168.8.67' } #CAD4MRITSPDISC48
   host { 'photon9'        : ip => '192.168.8.71' } #CAD4MRITSPDISC52
+  host { 'photon10'       : ip => '192.168.8.74' } #CAD4MRITSPDISC55
   #
   # CLEAN UP
   #
