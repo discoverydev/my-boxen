@@ -99,11 +99,6 @@ node default {
     node_version => $version
   }
 
-  npm_module { 'ios-deploy':
-    module => 'ios-deploy',
-    node_version => $version
-  }
-
   npm_module { 'deviceconsole':
     module => 'deviceconsole',
     node_version => $version
