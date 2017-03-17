@@ -361,10 +361,24 @@ node default {
   host { 'photon8'        : ip => '192.168.8.67' } #CAD4MRITSPDISC48
   host { 'photon9'        : ip => '192.168.8.71' } #CAD4MRITSPDISC52
   host { 'photon10'       : ip => '192.168.8.74' } #CAD4MRITSPDISC55
-  #
+  host { 'photon11'       : ip => '192.168.8.49' } #CAD4MRITSPDISC59
+  host { 'photon12'       : ip => '192.168.8.55' } #CAD4MRITSPDISC35
+  host { 'photon13'       : ip => '192.168.8.62' } #CAD4MRITSPDISC42
+  host { 'photon14'       : ip => '192.168.8.56' } #CAD4MRITSPDISC36
+  host { 'photon15'       : ip => '192.168.8.63' } #CAD4MRITSPDISC43
+  host { 'photon16'       : ip => '192.168.8.64' } #CAD4MRITSPDISC43
+  host { 'photon17'       : ip => '192.168.8.61' } #CAD4MRITSPDISC41
+  host { 'photon18'       : ip => '192.168.8.65' } #CAD4MRITSPDISC46
+  host { 'photon19'       : ip => '192.168.8.60' } #CAD4MRITSPDISC40
+  host { 'photon20'       : ip => '192.168.8.69' } #CAD4MRITSPDISC50
+  host { 'photon21'       : ip => '192.168.8.70' } #CAD4MRITSPDISC51
+  host { 'photon22'       : ip => '192.168.8.72' } #CAD4MRITSPDISC53
+  host { 'photon23'       : ip => '192.168.8.73' } #CAD4MRITSPDISC54
+  host { 'photon24'       : ip => '192.168.8.75' } #CAD4MRITSPDISC56
+
+ #
   # CLEAN UP
   #
-
   # packages that should not be present anymore
   package { 'android-sdk': ensure => absent }   # instead, custom pre-populated android-sdk installed after boxen
 
