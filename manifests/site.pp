@@ -75,7 +75,7 @@ node default {
   # NODE stuff
   #
 
-  class { 'nodejs::global': version => '8.7.1' }
+  class { 'nodejs::global': version => '7.7.1' }
 
   $version = '7.7.1'
   npm_module { "npm":
