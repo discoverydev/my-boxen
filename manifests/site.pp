@@ -75,7 +75,7 @@ node default {
   # NODE stuff
   #
 
-  class { 'nodejs::global': version => '7.7.1' }
+  class { 'nodejs::global': version => '8.7.1' }
 
   $version = '7.7.1'
   npm_module { "npm":
@@ -351,7 +351,7 @@ node default {
   # yellow lion laptops 
 
   host { 'warpath'        : ip => '192.168.8.52' } #
-  host { 'photon1'        : ip => '192.168.8.46' } #CAD4MRITSPDISC32
+  host { 'voltron1'        : ip => '192.168.8.46' } #CAD4MRITSPDISC32
   host { 'photon2'        : ip => '192.168.8.54' } #CAD4MRITSPDISC33
   host { 'photon3'        : ip => '192.168.8.57' } #CAD4MRITSPDISC37
   host { 'photon4'        : ip => '192.168.8.48' } #CAD4MRITSBDISC45
