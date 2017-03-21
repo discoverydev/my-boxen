@@ -357,7 +357,7 @@ node default {
   host { 'VOLTRON4'        : ip => '192.168.8.48' } #CAD4MRITSBDISC45
   host { 'VOLTRON5'        : ip => '192.168.8.59' } #CAD4MRITSPDISC39
   host { 'VOLTRON6'        : ip => '192.168.8.58' } #CAD4MRITSPDISC38
-  host { 'photon7'        : ip => '192.168.8.61' } #CAD4MRITSPDISC41
+  host { 'VOLTRON7'        : ip => '192.168.8.61' } #CAD4MRITSPDISC41
   host { 'VOLTRON8'        : ip => '192.168.8.67' } #CAD4MRITSPDISC48
   host { 'VOLTRON9'        : ip => '192.168.8.71' } #CAD4MRITSPDISC52
   host { 'VOLTRON10'       : ip => '192.168.8.74' } #CAD4MRITSPDISC55
@@ -367,14 +367,18 @@ node default {
   host { 'VOLTRON14'       : ip => '192.168.8.56' } #CAD4MRITSPDISC36
   host { 'VOLTRON15'       : ip => '192.168.8.63' } #CAD4MRITSPDISC43
   host { 'VOLTRON16'       : ip => '192.168.8.64' } #CAD4MRITSPDISC43
-  host { 'photon17'       : ip => '192.168.8.6' } #CAD4MRITSPDISC40
+  host { 'VOLTRON17'       : ip => '192.168.8.47' } #CAD4MRITSPDISC34
   host { 'VOLTRON18'       : ip => '192.168.8.65' } #CAD4MRITSPDISC46
-  host { 'VOLTRON19'       : ip => '192.168.8.60' } #CAD4MRITSPDISC40
+  host { 'VOLTRON19'       : ip => '192.168.8.77' } #CAD4MRITSPDISC58
   host { 'VOLTRON20'       : ip => '192.168.8.69' } #CAD4MRITSPDISC50
   host { 'VOLTRON21'       : ip => '192.168.8.70' } #CAD4MRITSPDISC51
   host { 'VOLTRON22'       : ip => '192.168.8.72' } #CAD4MRITSPDISC53
   host { 'VOLTRON23'       : ip => '192.168.8.73' } #CAD4MRITSPDISC54
   host { 'VOLTRON24'       : ip => '192.168.8.75' } #CAD4MRITSPDISC56
+  host { 'VOLTRON25'       : ip => '192.168.8.76' } #CAD4MRITSPDISC57
+  host { 'VOLTRON25'       : ip => '192.168.8.68' } #CAD4MRITSPDISC49
+ host { 'VOLTRON26'       : ip => '192.168.8.66' } #CAD4MRITSPDISC47
+# host { NO NAME UX LAPTOP      : ip => '192.168.8.66' } #CAD4MRITSPDISC40
 
  #
   # CLEAN UP
