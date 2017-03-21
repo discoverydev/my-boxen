@@ -376,9 +376,9 @@ node default {
   host { 'VOLTRON23'       : ip => '192.168.8.73' } #CAD4MRITSPDISC54
   host { 'VOLTRON24'       : ip => '192.168.8.75' } #CAD4MRITSPDISC56
   host { 'VOLTRON25'       : ip => '192.168.8.76' } #CAD4MRITSPDISC57
-  host { 'VOLTRON25'       : ip => '192.168.8.68' } #CAD4MRITSPDISC49
- host { 'VOLTRON26'       : ip => '192.168.8.66' } #CAD4MRITSPDISC47
-# host { NO NAME UX LAPTOP      : ip => '192.168.8.66' } #CAD4MRITSPDISC40
+  host { 'VOLTRON26'       : ip => '192.168.8.66' } #CAD4MRITSPDISC47
+ host { 'VOLTRON27'       : ip => '192.168.8.68' } #CAD4MRITSPDISC49
+# host { NO NAME nesa  UX LAPTOP      : ip => '192.168.8.60' } #CAD4MRITSPDISC40
 
  #
   # CLEAN UP
