@@ -378,6 +378,7 @@ node default {
   host { 'VOLTRON25'       : ip => '192.168.8.76' } #CAD4MRITSPDISC57
   host { 'VOLTRON26'       : ip => '192.168.8.66' } #CAD4MRITSPDISC47
  host { 'VOLTRON27'       : ip => '192.168.8.68' } #CAD4MRITSPDISC49
+
 # host { NO NAME nesa  UX LAPTOP      : ip => '192.168.8.60' } #CAD4MRITSPDISC40
 
  #
