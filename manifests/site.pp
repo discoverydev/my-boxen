@@ -158,6 +158,10 @@ node default {
     command => 'sudo easy_install pip',
     creates => '/usr/local/bin/pip',
   }
+  exec { 'add requests module':  
+    command => 'sudo pip install requests',
+    #creates => '/usr/local/bin/pip',
+  }
   exec { 'virtualenv':  # python environment manager
     require => Exec['pip'],
     command => 'sudo pip install virtualenv',
