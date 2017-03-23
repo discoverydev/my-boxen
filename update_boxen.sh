@@ -1,4 +1,4 @@
-#!/bin/bash -l
+#!/bin/bash -lue
 echo "updating boxen"
 cd /opt/boxen/repo
 git checkout ads
