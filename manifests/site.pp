@@ -292,6 +292,10 @@ node default {
     command => "${boxen::config::repodir}/manifests/scripts/install-vim-pathogen.sh"
   }
 
+  exec { 'install-vim-colors-solarized': # Install solarized colorscheme for vim
+    command => "${boxen::config::repodir}/manifests/scripts/install-vim-colors-solarized.sh"
+  }
+
   exec { 'link-imagemagick': # make sure imagemagick@6 is linked
     command => "${boxen::config::repodir}/manifests/scripts/relink-imagemagick.sh"
   }

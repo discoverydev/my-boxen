@@ -1,5 +1,10 @@
+"turn on vim pathogen
+execute pathogen#infect()
+
 "enable syntax highlighting
 syntax enable
+set background=dark 
+colorscheme solarized
 
 "turn on line numbers
 set number
