@@ -179,6 +179,16 @@ node default {
     require => Exec['create_virtual_environment'],
     command => "${boxen::config::repodir}/python_env/bin/pip install --upgrade nose",
   }
+  
+  exec { 'create_virtualenv_for_stash_util': 
+    require => Exec['virtualenv'],
+    command => 'virtualenv stash_utils_virtualenv', 
+  }
+  exec { 'install_stashy': # lib for stash api
+    require => Exec['create_virtualenv_for_stash_util'],
+    command => "${boxen::config::repodir}/stash_utils_virtualenv/bin/pip install --upgrade stashy",
+  }
+  
 
   #
   # BREW and BREW CASKS
