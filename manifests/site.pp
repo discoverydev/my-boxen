@@ -112,6 +112,10 @@ node default {
   ruby::version { '2.0.0-p648': }
   class { 'ruby::global': version => '2.2.2' }
 
+  ruby_gem { 'bropages':
+    gem          => 'bropages',
+    ruby_version => '*',
+  }
   ruby_gem { 'bundler':
     gem          => 'bundler',
     ruby_version => '*',
