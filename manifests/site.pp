@@ -162,10 +162,6 @@ node default {
     command => 'sudo easy_install pip',
     creates => '/usr/local/bin/pip',
   }
-  exec { 'add requests module':  
-    command => 'sudo pip install requests',
-    #creates => '/usr/local/bin/pip',
-  }
   exec { 'virtualenv':  # python environment manager
     require => Exec['pip'],
     command => 'sudo pip install virtualenv',
@@ -191,6 +187,22 @@ node default {
   exec { 'install_stashy': # lib for stash api
     require => Exec['create_virtualenv_for_stash_util'],
     command => "${boxen::config::repodir}/stash_utils_virtualenv/bin/pip install --upgrade stashy",
+    creates => "${boxen::config::repodir}/stash_utils_virtualenv/lib/python-2.7/site-packages/stashy/"
+  }
+  exec { 'install_requests': # lib for stash api
+    require => Exec['create_virtualenv_for_stash_util'],
+    command => "${boxen::config::repodir}/stash_utils_virtualenv/bin/pip install --upgrade requests",
+    creates => "${boxen::config::repodir}/stash_utils_virtualenv/lib/python-2.7/site-packages/requests/"
+  }
+  exec { 'install_nose': # lib for stash api
+    require => Exec['create_virtualenv_for_stash_util'],
+    command => "${boxen::config::repodir}/stash_utils_virtualenv/bin/pip install --upgrade nose",
+    creates => "${boxen::config::repodir}/stash_utils_virtualenv/lib/python-2.7/site-packages/nose/"
+  }
+  exec { 'install_mock': # lib for stash api
+    require => Exec['create_virtualenv_for_stash_util'],
+    command => "${boxen::config::repodir}/stash_utils_virtualenv/bin/pip install --upgrade mock",
+    creates => "${boxen::config::repodir}/stash_utils_virtualenv/lib/python-2.7/site-packages/mock/"
   }
   
 
