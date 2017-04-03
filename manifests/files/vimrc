@@ -27,3 +27,4 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " hit jk in insert mode to switch back to normal mode
 inoremap jk <esc>
+inoremap <S-Tab> <C-d>
