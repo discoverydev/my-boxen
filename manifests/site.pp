@@ -211,7 +211,7 @@ node default {
   #
 
   exec { "tap-discoverydev-ipa":
-    command => "brew tap discoverydev/ipa",
+    command => "brew tap --full discoverydev/homebrew-ipa",
     creates => "${homebrew::config::tapsdir}/discoverydev/homebrew-ipa",
   }
 
