@@ -361,7 +361,7 @@ node default {
   host { 'nightcrawler' : ip => '192.168.8.10' } # CAD5IRITSPDISC09
   host { 'bishop'       : ip => '192.168.8.11' } # CAD5IRITSPDISC10
   host { 'iceman'       : ip => '192.168.8.12' } # CAD5IRITSPDISC11
-  host { 'havok'        : ip => '192.168.8.139' } # CAD4IRITSPDISC12
+  host { 'havok'        : ip => '192.168.8.223' } # CAD4IRITSPDISC12
   host { 'sabretooth'   : ip => '192.168.8.14' } # CAD5IRITSPDISC13
   host { 'deadpool'     : ip => '192.168.8.18' } # CAD5IRITSPDISC17
   host { 'phoenix'      : ip => '192.168.8.22' } # CAD5IRITSPDISC21
