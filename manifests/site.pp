@@ -179,10 +179,10 @@ node default {
     require => Exec['create_virtual_environment'],
     command => "${boxen::config::repodir}/python_env/bin/pip install --upgrade nose",
   }
-  
-  exec { 'create_virtualenv_for_stash_util': 
+
+  exec { 'create_virtualenv_for_stash_util':
     require => Exec['virtualenv'],
-    command => 'virtualenv stash_utils_virtualenv', 
+    command => 'virtualenv stash_utils_virtualenv',
   }
   exec { 'install_stashy': # lib for stash api
     require => Exec['create_virtualenv_for_stash_util'],
@@ -204,7 +204,7 @@ node default {
     command => "${boxen::config::repodir}/stash_utils_virtualenv/bin/pip install --upgrade mock",
     creates => "${boxen::config::repodir}/stash_utils_virtualenv/lib/python-2.7/site-packages/mock/"
   }
-  
+
 
   #
   # BREW and BREW CASKS
@@ -361,7 +361,7 @@ node default {
   host { 'nightcrawler' : ip => '192.168.8.10' } # CAD5IRITSPDISC09
   host { 'bishop'       : ip => '192.168.8.11' } # CAD5IRITSPDISC10
   host { 'iceman'       : ip => '192.168.8.12' } # CAD5IRITSPDISC11
-  host { 'havok'        : ip => '192.168.8.30' } # CAD5IRITSPDISC12
+  host { 'havok'        : ip => '192.168.8.139' } # CAD4IRITSPDISC12
   host { 'sabretooth'   : ip => '192.168.8.14' } # CAD5IRITSPDISC13
   host { 'deadpool'     : ip => '192.168.8.18' } # CAD5IRITSPDISC17
   host { 'phoenix'      : ip => '192.168.8.22' } # CAD5IRITSPDISC21
