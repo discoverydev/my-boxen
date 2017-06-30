@@ -372,7 +372,7 @@ node default {
   host { 'doop'         : ip => '192.168.8.40' } # CAD4IRITSPDISC26
   host { 'dazzler'      : ip => '192.168.8.5'  } # CAD4IRITSPDISC27
   host { 'anole'        : ip => '192.168.8.9'  } # CAD4IRITSBDISC28
-  host { 'stryker'      : ip => '192.168.8.42' } # CAD4IRITSBDISC29
+  host { 'stryker'      : ip => '192.168.8.228' } # CAD4IRITSBDISC29
   host { 'bastion'      : ip => '192.168.8.44' } # CAD4IRITSBDISC31
   host { 'rogue'        : ip => '192.168.8.45' } # CAD4IRITSBDISC30
 
