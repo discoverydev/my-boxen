@@ -332,23 +332,20 @@ node default {
   #
 
   # aliases by service name
-  host { 'jenkins2'     : ip => '192.168.8.44'  }
-  host { 'stash'        : ip => '192.168.8.37'  }
+  host { 'jenkins2'     : ip => '192.168.152.14'  }
+  host { 'stash'        : ip => '192.168.152.7'  }
   host { 'nexus'        : ip => '192.168.8.37'  }
   host { 'tomcat'       : ip => '192.168.8.32'  }
   host { 'confluence'   : ip => '205.144.60.35' }
   host { 'sonarqube'    : ip => '192.168.8.35'  }
-  host { 'mockserver'   : ip => '192.168.8.35'  }
+  host { 'mockserver'   : ip => '192.168.152.2'  }
   host { 'yard'         : ip => '192.168.8.35'  }
 
   # aliases by machine name - CI
-  host { 'xavier'       : ip => '192.168.8.31' } # Pillar
-  host { 'warlock'      : ip => '192.168.8.33' } # Pillar
-  host { 'wolverine'    : ip => '192.168.8.34' } # Pillar
-  host { 'beast'        : ip => '192.168.8.35' } # CAD5IRITSPDISC07
-  host { 'mystique'     : ip => '192.168.8.36' } # CAD4IRITSPDISC18
-  host { 'negasonic'    : ip => '192.168.8.37' } # CAD4IRITSPDISC19
-  host { 'apocalypse'   : ip => '192.168.8.38' } # CAD4IRITSPDISC20
+  host { 'beast'        : ip => '192.168.152.2' } # CAD5IRITSPDISC07
+  host { 'mystique'     : ip => '192.168.152.6' } # CAD4IRITSPDISC18
+  host { 'negasonic'    : ip => '192.168.152.7' } # CAD4IRITSPDISC19
+  host { 'apocalypse'   : ip => '192.168.152.7' } # CAD4IRITSPDISC20
 
   # aliases by machine name - workstations
   # please note that laptops are not aliased here - see the equipment list for details on those
@@ -357,24 +354,24 @@ node default {
   host { 'magneto'      : ip => '192.168.8.4'  } # CAD5IRITSPDISC03
   host { 'banshee'      : ip => '192.168.8.29' } # CAD5IRITSPDISC04
   host { 'colossus'     : ip => '192.168.8.6'  } # CAD5IRITSPDISC05
-  host { 'longshot'     : ip => '192.168.8.28' } # CAD5IRITSPDISC08
+  host { 'longshot'     : ip => '192.168.152.62' } # CAD5IRITSPDISC08
   host { 'nightcrawler' : ip => '192.168.8.10' } # CAD5IRITSPDISC09
   host { 'bishop'       : ip => '192.168.8.11' } # CAD5IRITSPDISC10
   host { 'iceman'       : ip => '192.168.8.12' } # CAD5IRITSPDISC11
   host { 'havok'        : ip => '192.168.8.223' } # CAD4IRITSPDISC12
   host { 'sabretooth'   : ip => '192.168.8.14' } # CAD5IRITSPDISC13
-  host { 'deadpool'     : ip => '192.168.8.18' } # CAD5IRITSPDISC17
+  host { 'deadpool'     : ip => '192.168.152.59' } # CAD5IRITSPDISC17
   host { 'phoenix'      : ip => '192.168.8.22' } # CAD5IRITSPDISC21
-  host { 'shadowcat'    : ip => '192.168.8.23' } # CAD5IRITSPDISC22
-  host { 'storm'        : ip => '192.168.8.24' } # CAD5IRITSPDISC23
+  host { 'shadowcat'    : ip => '192.168.152.9' } # CAD5IRITSPDISC22
+  host { 'storm'        : ip => '192.168.152.10' } # CAD5IRITSPDISC23
   host { 'cable'        : ip => '192.168.8.25' } # CAD5IRITSPDISC24
-  host { 'angel'        : ip => '192.168.8.26' } # CAD5IRITSPDISC25
+  host { 'angel'        : ip => '192.168.152.55' } # CAD5IRITSPDISC25
   host { 'doop'         : ip => '192.168.8.40' } # CAD4IRITSPDISC26
   host { 'dazzler'      : ip => '192.168.8.5'  } # CAD4IRITSPDISC27
   host { 'anole'        : ip => '192.168.8.9'  } # CAD4IRITSBDISC28
-  host { 'stryker'      : ip => '192.168.8.228' } # CAD4IRITSBDISC29
-  host { 'bastion'      : ip => '192.168.8.44' } # CAD4IRITSBDISC31
-  host { 'rogue'        : ip => '192.168.8.247' } # CAD4IRITSPDISC30
+  host { 'stryker'      : ip => '192.168.152.12' } # CAD4IRITSBDISC29
+  host { 'bastion'      : ip => '192.168.152.14' } # CAD4IRITSBDISC31
+  host { 'rogue'        : ip => '192.168.152.13' } # CAD4IRITSPDISC30
 
   host { 'retail-jira'          : ip => '205.144.60.35' }
   host { 'retail-stash'         : ip => '205.144.60.35' }
@@ -385,32 +382,32 @@ node default {
   # yellow lion laptops
 
   host { 'warpath'        : ip => '192.168.8.52' } #
-  host { 'VOLTRON1'        : ip => '192.168.8.46' } #CAD4MRITSPDISC32
-  host { 'VOLTRON2'        : ip => '192.168.8.54' } #CAD4MRITSPDISC33
+  host { 'VOLTRON1'        : ip => '192.168.152.15' } #CAD4MRITSPDISC32
+  host { 'VOLTRON2'        : ip => '192.168.152.23' } #CAD4MRITSPDISC33
   host { 'VOLTRON3'        : ip => '192.168.8.57' } #CAD4MRITSPDISC37
-  host { 'VOLTRON4'        : ip => '192.168.8.48' } #CAD4MRITSBDISC45
-  host { 'VOLTRON5'        : ip => '192.168.8.59' } #CAD4MRITSPDISC39
-  host { 'VOLTRON6'        : ip => '192.168.8.58' } #CAD4MRITSPDISC38
-  host { 'VOLTRON7'        : ip => '192.168.8.61' } #CAD4MRITSPDISC41
-  host { 'VOLTRON8'        : ip => '192.168.8.67' } #CAD4MRITSPDISC48
-  host { 'VOLTRON9'        : ip => '192.168.8.71' } #CAD4MRITSPDISC52
+  host { 'VOLTRON4'        : ip => '192.168.152.17' } #CAD4MRITSBDISC45
+  host { 'VOLTRON5'        : ip => '192.168.152.28' } #CAD4MRITSPDISC39
+  host { 'VOLTRON6'        : ip => '192.168.152.27' } #CAD4MRITSPDISC38
+  host { 'VOLTRON7'        : ip => '192.168.152.30' } #CAD4MRITSPDISC41
+  host { 'VOLTRON8'        : ip => '192.168.152.36' } #CAD4MRITSPDISC48
+  host { 'VOLTRON9'        : ip => '192.168.152.40' } #CAD4MRITSPDISC52
   host { 'VOLTRON10'       : ip => '192.168.8.74' } #CAD4MRITSPDISC55
-  host { 'VOLTRON11'       : ip => '192.168.8.49' } #CAD4MRITSPDISC59
-  host { 'VOLTRON12'       : ip => '192.168.8.55' } #CAD4MRITSPDISC35
-  host { 'VOLTRON13'       : ip => '192.168.8.62' } #CAD4MRITSPDISC42
-  host { 'VOLTRON14'       : ip => '192.168.8.56' } #CAD4MRITSPDISC36
-  host { 'VOLTRON15'       : ip => '192.168.8.63' } #CAD4MRITSPDISC43
-  host { 'VOLTRON16'       : ip => '192.168.8.64' } #CAD4MRITSPDISC43
+  host { 'VOLTRON11'       : ip => '192.168.152.18' } #CAD4MRITSPDISC59
+  host { 'VOLTRON12'       : ip => '192.168.152.24' } #CAD4MRITSPDISC35
+  host { 'VOLTRON13'       : ip => '192.168.152.31' } #CAD4MRITSPDISC42
+  host { 'VOLTRON14'       : ip => '192.168.152.25' } #CAD4MRITSPDISC36
+  host { 'VOLTRON15'       : ip => '192.168.152.32' } #CAD4MRITSPDISC43
+  host { 'VOLTRON16'       : ip => '192.168.152.33' } #CAD4MRITSPDISC43
   host { 'VOLTRON17'       : ip => '192.168.8.47' } #CAD4MRITSPDISC34
-  host { 'VOLTRON18'       : ip => '192.168.8.65' } #CAD4MRITSPDISC46
-  host { 'VOLTRON19'       : ip => '192.168.8.77' } #CAD4MRITSPDISC58
-  host { 'VOLTRON20'       : ip => '192.168.8.69' } #CAD4MRITSPDISC50
-  host { 'VOLTRON21'       : ip => '192.168.8.70' } #CAD4MRITSPDISC51
+  host { 'VOLTRON18'       : ip => '192.168.152.34' } #CAD4MRITSPDISC46
+  host { 'VOLTRON19'       : ip => '192.168.152.46' } #CAD4MRITSPDISC58
+  host { 'VOLTRON20'       : ip => '192.168.152.38' } #CAD4MRITSPDISC50
+  host { 'VOLTRON21'       : ip => '192.168.152.39' } #CAD4MRITSPDISC51
   host { 'VOLTRON22'       : ip => '192.168.8.72' } #CAD4MRITSPDISC53
-  host { 'VOLTRON23'       : ip => '192.168.8.73' } #CAD4MRITSPDISC54
-  host { 'VOLTRON24'       : ip => '192.168.8.75' } #CAD4MRITSPDISC56
-  host { 'VOLTRON25'       : ip => '192.168.8.76' } #CAD4MRITSPDISC57
-  host { 'VOLTRON26'       : ip => '192.168.8.66' } #CAD4MRITSPDISC47
+  host { 'VOLTRON23'       : ip => '192.168.152.42' } #CAD4MRITSPDISC54
+  host { 'VOLTRON24'       : ip => '192.168.152.44' } #CAD4MRITSPDISC56
+  host { 'VOLTRON25'       : ip => '192.168.152.45' } #CAD4MRITSPDISC57
+  host { 'VOLTRON26'       : ip => '192.168.152.35' } #CAD4MRITSPDISC47
  host { 'VOLTRON27'       : ip => '192.168.8.68' } #CAD4MRITSPDISC49
  host { 'VOLTRON31'       : ip => '192.168.8.206' } #CAD4MRITSPDISC60
  host { 'forge'           : ip => '192.168.8.57' } #CAD4MRITSPDISC02
