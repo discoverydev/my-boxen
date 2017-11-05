@@ -345,7 +345,7 @@ node default {
   host { 'beast'        : ip => '192.168.152.2' } # CAD5IRITSPDISC07
   host { 'mystique'     : ip => '192.168.152.6' } # CAD4IRITSPDISC18
   host { 'negasonic'    : ip => '192.168.152.7' } # CAD4IRITSPDISC19
-  host { 'apocalypse'   : ip => '192.168.152.7' } # CAD4IRITSPDISC20
+  host { 'apocalypse'   : ip => '192.168.152.8' } # CAD4IRITSPDISC20
 
   # aliases by machine name - workstations
   # please note that laptops are not aliased here - see the equipment list for details on those
@@ -357,7 +357,7 @@ node default {
   host { 'longshot'     : ip => '192.168.152.62' } # CAD5IRITSPDISC08
   host { 'nightcrawler' : ip => '192.168.8.10' } # CAD5IRITSPDISC09
   host { 'bishop'       : ip => '192.168.8.11' } # CAD5IRITSPDISC10
-  host { 'iceman'       : ip => '192.168.8.12' } # CAD5IRITSPDISC11
+  host { 'iceman'       : ip => '192.168.152.51' } # CAD5IRITSPDISC11
   host { 'havok'        : ip => '192.168.8.223' } # CAD4IRITSPDISC12
   host { 'sabretooth'   : ip => '192.168.8.14' } # CAD5IRITSPDISC13
   host { 'deadpool'     : ip => '192.168.152.59' } # CAD5IRITSPDISC17
@@ -366,8 +366,8 @@ node default {
   host { 'storm'        : ip => '192.168.152.10' } # CAD5IRITSPDISC23
   host { 'cable'        : ip => '192.168.8.25' } # CAD5IRITSPDISC24
   host { 'angel'        : ip => '192.168.152.55' } # CAD5IRITSPDISC25
-  host { 'doop'         : ip => '192.168.8.40' } # CAD4IRITSPDISC26
-  host { 'dazzler'      : ip => '192.168.8.5'  } # CAD4IRITSPDISC27
+  host { 'doop'         : ip => '192.168.152.52' } # CAD4IRITSPDISC26
+  host { 'dazzler'      : ip => '192.168.152.65  } # CAD4IRITSPDISC27
   host { 'anole'        : ip => '192.168.8.9'  } # CAD4IRITSBDISC28
   host { 'stryker'      : ip => '192.168.152.12' } # CAD4IRITSBDISC29
   host { 'bastion'      : ip => '192.168.152.14' } # CAD4IRITSBDISC31
