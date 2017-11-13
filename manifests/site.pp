@@ -367,10 +367,9 @@ node default {
   host { 'cable'        : ip => '192.168.8.25' } # CAD5IRITSPDISC24
   host { 'angel'        : ip => '192.168.152.55' } # CAD5IRITSPDISC25
   host { 'doop'         : ip => '192.168.152.52' } # CAD4IRITSPDISC26
-  host { 'dazzler'      : ip => '192.168.152.65  } # CAD4IRITSPDISC27
-  host { 'anole'        : ip => '192.168.8.9'  } # CAD4IRITSBDISC28
-  host { 'stryker'      : ip => '192.168.152.12' } # CAD4IRITSBDISC29
-  host { 'bastion'      : ip => '192.168.152.14' } # CAD4IRITSBDISC31
+  host { 'dazzler'      : ip => '192.168.152.65' } # CAD4IRITSPDISC27
+  host { 'stryker'      : ip => '192.168.152.12' } # CAD4IRITSPDISC27
+  host { 'bastion'      : ip => '192.168.152.14'} # CAD4IRITSBDISC31
   host { 'rogue'        : ip => '192.168.152.13' } # CAD4IRITSPDISC30
 
   host { 'retail-jira'          : ip => '205.144.60.35' }
