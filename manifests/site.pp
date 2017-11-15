@@ -345,7 +345,7 @@ node default {
   host { 'beast'        : ip => '192.168.152.2' } # CAD5IRITSPDISC07
   host { 'mystique'     : ip => '192.168.152.6' } # CAD4IRITSPDISC18
   host { 'negasonic'    : ip => '192.168.152.7' } # CAD4IRITSPDISC19
-  host { 'apocalypse'   : ip => '192.168.152.8' } # CAD4IRITSPDISC20
+  host { 'apocalypse'   : ip => '192.168.152.57' } # CAD4IRITSPDISC20
 
   # aliases by machine name - workstations
   # please note that laptops are not aliased here - see the equipment list for details on those
