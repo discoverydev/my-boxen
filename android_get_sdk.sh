@@ -1,7 +1,7 @@
-#!/bin/bash 
+#!/bin/bash
 
 USER=ga-mlsdiscovery
-SERVER=192.168.8.36 # mystique
+SERVER=192.168.152.6 # mystique
 
 source ~/.profile
 
@@ -24,10 +24,10 @@ if [[ -e ${DESTINATION}/${ANDROID_SDK} ]]; then
     echo "Android SDK detected - updating from gold image"
     echo "remove /opt/android-sdk to force a full redownload of the SDK."
     rsync -au --progress ${USER}@${SERVER}:${SRC}/${ANDROID_SDK} ${DESTINATION}
-else 
+else
     echo "No Android SDK detected - cloning from gold image"
     echo "rsync --progress ${USER}@${SERVER}:${SRC}/${TARFILE} ${DESTINATION}/${TARFILE} "
-    rsync --progress ${USER}@${SERVER}:${SRC}/${TARFILE} ${DESTINATION}/${TARFILE} 
+    rsync --progress ${USER}@${SERVER}:${SRC}/${TARFILE} ${DESTINATION}/${TARFILE}
 
     tar xzkvf ${TARFILE}
 fi
